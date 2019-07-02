@@ -1,1 +1,35 @@
 
+
+.title{
+   height: 25vh;
+   width: 100vw;
+   display: inline-block;
+}
+
+.container{
+   height: 75vh;
+   width: 60vw;
+   display: inline-block;
+   background-color: cadetblue;
+   margin-top: 1%;
+   margin-left: 4%;
+   margin-right: 4%;
+   float: right;
+}
+
+.panel{
+   height: 75vh;
+   width: 25vw;
+   background-color: burlywood;
+}
+
+.card{
+   height: 15vh;
+   width: 10vw;
+   display: inline-block;
+   margin-top: 4%;
+   margin-left: 5%;
+   margin-right: 1%;
+   border: 1px;
+   background-color: orange;
+}
