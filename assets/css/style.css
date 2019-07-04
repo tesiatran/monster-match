@@ -1,1 +1,79 @@
+body{
+   height: 99vh;
+   width: 99vw;
+   margin: 2px;
+}
 
+div{
+   text-align: center;
+   font-family: fantasy;
+}
+
+.titleContainer{
+   height: 19%;
+   width: 99.5%;
+   border: 1px solid black;
+   background-color: blanchedalmond;
+   font-size: 6rem;
+   color: black;
+   display: inline-block;
+}
+
+.panelContainer{
+   height: 79%;
+   width: 24%;
+   border: 1px solid black;
+   background-color: blanchedalmond;
+   display: inline-block;
+   margin-top: 1%;
+   vertical-align: top;
+}
+
+.panelTitle{
+   height: 7%;
+   width: 80%;
+   display: inline-block;
+   position: relative;
+   margin-top: 10%;
+   left: 10%;
+   font-size: 2rem;
+}
+
+.panels{
+   height: 10%;
+   width: 80%;
+   border: 1px solid black;
+   background-color: paleturquoise;
+   display: inline-block;
+   position: relative;
+   margin-top: 6%;
+   left: 10%;
+   padding: 10px, 0;
+}
+
+.gameContainer{
+   height: 79%;
+   width: 74%;
+   border: 1px solid black;
+   background-color: blanchedalmond;
+   display: inline-block;
+   margin-top: 1%;
+   margin-left: 1%;
+}
+
+.cardContainer{
+   height: 100%;
+   width: 100%;
+   display: inline-block;
+   position: relative;
+}
+
+.cards{
+   height: 28%;
+   width: 15%;
+   border: 1px solid black;
+   background-color: pink;
+   display: inline-block;
+   position: relative;
+   top: 6%;
+}
