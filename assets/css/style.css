@@ -77,3 +77,97 @@ div{
    position: relative;
    top: 6%;
 }
+
+.cardBack{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/lfz-card.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.bill{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/bill.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.brett{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/brett.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.cody{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/cody.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.dan{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/dan.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.scott{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/scott.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.timD{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/tim-d.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.timH{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/tim-h.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.tj{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/tj.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.blindRobot{
+   background-image: url("C:/Users/testr/lfz/memory_match/assets/images/blind-robot.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.hidden{
+   display: none;
+}
