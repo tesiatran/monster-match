@@ -5,27 +5,37 @@ var secondCardClicked = null;
 var firstCardBack = null;
 var secondCardBack = null;
 var matches = null;
-var maxMatches = 2;
+var maxMatches = 9;
 var firstImage = null;
 var secondImage = null;
-// var attempts = null;
-// var gamesPlayed = null;
+var accuracy = null;
+var attempts = null;
+var gamesPlayed = null;
 
 function intitializeApp(){
    $(".cards").on("click", handleCardClick);
+   $(".closeModal").on("click", closeModal);
 }
 
 function handleCardClick(event){
    console.log(event);
 
+   console.log(event.target);
+
+   var stopCheating = (event.target);
+
+   if($(stopCheating).hasClass("cardFront")){
+      return;
+   }
+
    if(firstCardClicked === null){
-      firstCardBack = $(event.target).addClass("hidden");
+      firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
       firstCardClicked = $(event.currentTarget.firstElementChild);
       firstImage = firstCardClicked.css("background-image");
 
    } else{
-      secondCardBack = $(event.target).addClass("hidden");
+      secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
       secondCardClicked = $(event.currentTarget.firstElementChild);
       secondImage = secondCardClicked.css("background-image");
@@ -38,24 +48,23 @@ function handleCardClick(event){
          firstImage = null;
          secondImage = null;
          matches++;
-         // attempts++;
+         attempts++;
+         calculateAccuracy();
 
       } else{
          console.log("flip card back");
          setTimeout(flipCardBack, 800);
-         // attempts++;
+         attempts++;
+         calculateAccuracy();
 
       }
    }
 
-   // displayStats();
+   displayStats();
 
    if(matches === maxMatches){
       $(".modalContainer").removeClass("hidden");
-      // gamesPlayed++;
    }
-
-   $(".closeModal").on("click", closeModal);
 
 }
 
@@ -72,15 +81,26 @@ function flipCardBack(){
 
 function closeModal(){
    $(".modalContainer").addClass("hidden");
+   $(".cardBack").removeClass("hidden");
+   firstCardBack = null;
+   secondCardBack = null;
+   firstCardClicked = null;
+   secondCardClicked = null;
+   firstImage = null;
+   secondImage = null;
+   matches = null;
+   gamesPlayed++;
+   $(".gamesPlayed").text(gamesPlayed);
 }
 
-// function calculateAccuracy(){
-//    var accuracyPercentage = (matches / attempts) * 100;
-//    return accuracyPercentage + "%";
-// }
+function calculateAccuracy(){
+   accuracy = (matches / attempts) * 100;
+   return;
+}
 
-// function displayStats(){
-      // var accuracy = calculateAccuracy();
-      // $(".accuracyPercentage").text(accuracy);
-      // $(".gamesAttempted").text(attempts);
-// }
+function displayStats(){
+      calculateAccuracy();
+      $(".accuracy").text(accuracy.toFixed(2) + "%");
+      $(".attempts").text(attempts);
+      // $(".gamesPlayed").text(gamesPlayed);
+}
