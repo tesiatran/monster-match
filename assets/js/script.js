@@ -5,7 +5,7 @@ var secondCardClicked = null;
 var firstCardBack = null;
 var secondCardBack = null;
 var matches = null;
-var maxMatches = 9;
+var maxMatches = 1;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
@@ -14,7 +14,7 @@ var gamesPlayed = null;
 
 function intitializeApp(){
    $(".cards").on("click", handleCardClick);
-   $(".closeModal").on("click", closeModal);
+   $(".closeModal").on("click", resetStats);
 }
 
 function handleCardClick(event){
@@ -58,9 +58,10 @@ function handleCardClick(event){
          calculateAccuracy();
 
       }
-   }
 
-   displayStats();
+      displayStats();
+
+   }
 
    if(matches === maxMatches){
       $(".modalContainer").removeClass("hidden");
@@ -79,7 +80,7 @@ function flipCardBack(){
    secondImage = null;
 }
 
-function closeModal(){
+function resetStats(){
    $(".modalContainer").addClass("hidden");
    $(".cardBack").removeClass("hidden");
    firstCardBack = null;
@@ -91,6 +92,11 @@ function closeModal(){
    matches = null;
    gamesPlayed++;
    $(".gamesPlayed").text(gamesPlayed);
+   matches = null;
+   accuracy = null;
+   attempts = null;
+   $(".accuracy").text(accuracy);
+   $(".attempts").text(attempts);
 }
 
 function calculateAccuracy(){

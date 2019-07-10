@@ -185,12 +185,13 @@ div{
    margin: 15% auto;
    padding: 20px;
    border: 1px solid black;
-   width: 80%;
+   width: 50%;
+   font-size: 30px;
 }
 
 .closeModal{
    color: white;
-   font-size: 10px;
+   font-size: 15px;
    font-weight: bold;
    border: 1px solid black;
    background-color: black;
