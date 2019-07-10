@@ -5,7 +5,7 @@ var secondCardClicked = null;
 var firstCardBack = null;
 var secondCardBack = null;
 var matches = null;
-// var maxMatches = 2;
+var maxMatches = 2;
 var firstImage = null;
 var secondImage = null;
 // var attempts = null;
@@ -50,10 +50,13 @@ function handleCardClick(event){
 
    // displayStats();
 
-   // if(matches = maxMatches){
-   //    $(".modalContainer").removeClass("hidden");
-   //    gamesPlayed++;
-   // }
+   if(matches === maxMatches){
+      $(".modalContainer").removeClass("hidden");
+      // gamesPlayed++;
+   }
+
+   $(".closeModal").on("click", closeModal);
+
 }
 
 function flipCardBack(){
@@ -65,6 +68,10 @@ function flipCardBack(){
    secondCardClicked = null;
    firstImage = null;
    secondImage = null;
+}
+
+function closeModal(){
+   $(".modalContainer").addClass("hidden");
 }
 
 // function calculateAccuracy(){
