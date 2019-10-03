@@ -3,7 +3,7 @@ $(document).ready(intitializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var firstCardBack = null;
-var secondCardBack = null;
+ var secondCardBack = null;
 var matches = null;
 var maxMatches = 9;
 var firstImage = null;
