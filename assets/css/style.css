@@ -6,14 +6,14 @@ body{
 
 div{
    text-align: center;
-   font-family: fantasy;
+   font-family: 'Luckiest Guy', cursive;
 }
 
 .titleContainer{
    height: 19%;
    width: 99.5%;
    border: 1px solid black;
-   background-color: blanchedalmond;
+   background-color: rgb(152, 105, 214);
    font-size: 6rem;
    color: black;
    display: inline-block;
@@ -23,7 +23,7 @@ div{
    height: 79%;
    width: 24%;
    border: 1px solid black;
-   background-color: blanchedalmond;
+   background-color: rgb(152, 105, 214);
    display: inline-block;
    margin-top: 1%;
    vertical-align: top;
@@ -43,7 +43,7 @@ div{
    height: 9%;
    width: 80%;
    border: 1px solid black;
-   background-color: paleturquoise;
+   background-color: rgb(66, 211, 211);
    display: inline-block;
    position: relative;
    margin-top: 6%;
@@ -55,7 +55,7 @@ div{
    height: 79%;
    width: 74%;
    border: 1px solid black;
-   background-color: blanchedalmond;
+   background-color: rgb(152, 105, 214);
    display: inline-block;
    margin-top: 1%;
    margin-left: 1%;
@@ -79,7 +79,7 @@ div{
 }
 
 .cardBack{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/lfz-card.jpg");
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/doors.png");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -87,8 +87,8 @@ div{
    background-position: center;
 }
 
-.bill{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/bill.jpg");
+.cda{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/cda.jpg");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -96,8 +96,8 @@ div{
    background-position: center;
 }
 
-.brett{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/brett.jpg");
+.celia{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/celia-mae.png");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -105,8 +105,8 @@ div{
    background-position: center;
 }
 
-.cody{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/cody.jpg");
+.charlie{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/charlie-proctor.png");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -114,8 +114,8 @@ div{
    background-position: center;
 }
 
-.dan{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/dan.jpg");
+.fungus{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/fungus.jpg");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -123,8 +123,8 @@ div{
    background-position: center;
 }
 
-.scott{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/scott.jpg");
+.george{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/george-sanderson.jpg");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -132,8 +132,8 @@ div{
    background-position: center;
 }
 
-.timD{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/tim-d.jpg");
+.henry{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/henry-waternoose.jpg");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -141,8 +141,8 @@ div{
    background-position: center;
 }
 
-.timH{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/tim-h.jpg");
+.sully{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/james-sullivan.jpg");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -150,8 +150,8 @@ div{
    background-position: center;
 }
 
-.tj{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/tj.jpg");
+.jerry{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/jerry.jpg");
    height: 100%;
    width: 100%;
    position: absolute;
@@ -159,8 +159,44 @@ div{
    background-position: center;
 }
 
-.blindRobot{
-   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/blind-robot.jpg");
+.mike{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/mike-wazowski.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.needle{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/needleman-and-smitty.png");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.randall{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/randall-boggs.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.roz{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/roz.jpg");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+
+.thaddeus{
+   background-image: url("C:/Users/testr/lfz/monsters-memory-match/assets/images/thaddeus-bile.png");
    height: 100%;
    width: 100%;
    position: absolute;
