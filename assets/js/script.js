@@ -33,10 +33,17 @@ function intitializeApp(){
 }
 
 function createCards(){
-   var cards = { rows: 4, squares: 5 };
-   var totalCards = $('.cardContainer');
+   var totalCards = { rows: 4, cards: 5 };
+   var cardContainer = $('.cardContainer');
 
-
+   for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++){
+      var newRow = $("<div>").addClass("row");
+      for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++){
+         var newCard = $("<div").addClass("card");
+         newRow.append(newCard);
+      }
+      cardContainer.append(newRow);
+   }
  }
 
  function populateCards(imageArray){
