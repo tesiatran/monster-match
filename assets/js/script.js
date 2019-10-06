@@ -29,36 +29,36 @@ function intitializeApp(){
    $(".closeModal").on("click", resetStats);
 
    createCards();
-   populateCards();
+   // populateCards();
 }
 
 function createCards(){
    var totalCards = { rows: 4, cards: 5 };
-   var cardContainer = $('.cardContainer');
+   var cardContainer = $(".cardContainer");
 
    for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++){
       var newRow = $("<div>").addClass("row");
       for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++){
-         var newCard = $("<div").addClass("card");
+         var newCard = $("<div>").addClass("card");
          newRow.append(newCard);
       }
       cardContainer.append(newRow);
    }
  }
 
- function populateCards(imageArray){
-   var cardArray = [];
+//  function populateCards(imageArray){
+//    var cardArray = [];
 
-   for(var imageIndex = 0; imageIndex < imageArray.length; imageIndex++){
-       var card = $('<div>', {
-           class: 'cardContainer',
-           image: imageArray[imageIndex]
-       });
+//    for(var imageIndex = 0; imageIndex < imageArray.length; imageIndex++){
+//        var card = $('<div>', {
+//            class: 'cardContainer',
+//            image: imageArray[imageIndex]
+//        });
 
-       cardArray.push(card);
-   }
-   $('.cardContainer').append(cardArray);
- }
+//        cardArray.push(card);
+//    }
+//    $('.cardContainer').append(cardArray);
+//  }
 
 function handleCardClick(event){
    console.log(event);

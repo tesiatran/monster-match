@@ -3,3 +3,14 @@
    width: 700px;
    margin: auto;
 }
+
+.row{
+   display: flex;
+   height: 12.5%;
+}
+
+.card{
+   display: inline-block;
+   height: 100%;
+   width: 12.5%;
+}
