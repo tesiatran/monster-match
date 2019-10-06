@@ -11,7 +11,18 @@ var secondImage = null;
 var accuracy = null;
 var attempts = null;
 var gamesPlayed = null;
-var monsterArray = [];
+var monsterArray = [
+   "../assets/images/celia-mae.png",
+   "../assets/images/charlie-proctor.png",
+   "../assets/images/fungus.jpg",
+   "../assets/images/george-sanderson.jpg",
+   "../assets/images/henry-waternoose.jpg",
+   "../assets/images/jerry.jpg",
+   "../assets/images/needleman-and-smitty.png",
+   "../assets/images/randall-boggs.jpg",
+   "../assets/images/roz.jpg",
+   "../assets/images/thaddeus-bile.png"
+];
 
 function intitializeApp(){
    $(".cards").on("click", handleCardClick);
