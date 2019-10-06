@@ -21,6 +21,16 @@ var monsterArray = [
    "../assets/images/needleman-and-smitty.png",
    "../assets/images/randall-boggs.jpg",
    "../assets/images/roz.jpg",
+   "../assets/images/thaddeus-bile.png",
+   "../assets/images/celia-mae.png",
+   "../assets/images/charlie-proctor.png",
+   "../assets/images/fungus.jpg",
+   "../assets/images/george-sanderson.jpg",
+   "../assets/images/henry-waternoose.jpg",
+   "../assets/images/jerry.jpg",
+   "../assets/images/needleman-and-smitty.png",
+   "../assets/images/randall-boggs.jpg",
+   "../assets/images/roz.jpg",
    "../assets/images/thaddeus-bile.png"
 ];
 
@@ -29,36 +39,39 @@ function intitializeApp(){
    $(".closeModal").on("click", resetStats);
 
    createCards();
-   // populateCards();
 }
 
 function createCards(){
-   var totalCards = { rows: 4, cards: 5 };
+   var totalCards = {
+      rows: 4,
+      cards: 5
+   };
    var cardContainer = $(".cardContainer");
+   var monsterIndex = 0;
 
    for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++){
-      var newRow = $("<div>").addClass("row");
+      var newRow = $("<div>")
+         .addClass("row");
+
       for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++){
-         var newCard = $("<div>").addClass("card");
+         var newCard = $("<div>")
+            .addClass("card");
+         var cardFront = $("<div>")
+            .addClass("card cardFront")
+            // .attr("background-image: url('" + monsterArray[monsterIndex] + "'");
+         var cardBack = $("<div>")
+            .addClass("card cardBack")
+            .attr("style", "background-image: url('./assets/images/doors-only.png'");
+
+         newCard.append(cardFront);
+         newCard.append(cardBack);
          newRow.append(newCard);
+
+         monsterIndex++;
       }
       cardContainer.append(newRow);
    }
  }
-
-//  function populateCards(imageArray){
-//    var cardArray = [];
-
-//    for(var imageIndex = 0; imageIndex < imageArray.length; imageIndex++){
-//        var card = $('<div>', {
-//            class: 'cardContainer',
-//            image: imageArray[imageIndex]
-//        });
-
-//        cardArray.push(card);
-//    }
-//    $('.cardContainer').append(cardArray);
-//  }
 
 function handleCardClick(event){
    console.log(event);
