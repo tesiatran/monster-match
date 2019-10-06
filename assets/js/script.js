@@ -11,11 +11,36 @@ var secondImage = null;
 var accuracy = null;
 var attempts = null;
 var gamesPlayed = null;
+var monsterArray = [];
 
 function intitializeApp(){
    $(".cards").on("click", handleCardClick);
    $(".closeModal").on("click", resetStats);
+
+   createCards();
+   populateCards();
 }
+
+function createCards(){
+   var cards = { rows: 4, squares: 5 };
+   var totalCards = $('.cardContainer');
+
+
+ }
+
+ function populateCards(imageArray){
+   var cardArray = [];
+
+   for(var imageIndex = 0; imageIndex < imageArray.length; imageIndex++){
+       var card = $('<div>', {
+           class: 'cardContainer',
+           image: imageArray[imageIndex]
+       });
+
+       cardArray.push(card);
+   }
+   $('.cardContainer').append(cardArray);
+ }
 
 function handleCardClick(event){
    console.log(event);
