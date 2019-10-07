@@ -166,3 +166,15 @@ function displayStats(){
       $(".attempts").text(attempts);
       // $(".gamesPlayed").text(gamesPlayed);
 }
+
+function shuffleCards(cardArray) {
+   var counter = cardArray.length;
+   while (counter > 0) {
+      var cardIndex = Math.floor(Math.random() * counter);
+      counter--;
+      var newIndex = cardArray[counter];
+      cardArray[counter] = cardArray[cardIndex];
+      cardArray[cardIndex] = newIndex;
+   }
+   return cardArray;
+}
