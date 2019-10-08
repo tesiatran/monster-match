@@ -12,30 +12,30 @@ var accuracy = null;
 var attempts = null;
 var gamesPlayed = null;
 var monsterArray = [
-   "../assets/images/celia-mae.png",
-   "../assets/images/charlie-proctor.png",
-   "../assets/images/fungus.jpg",
-   "../assets/images/george-sanderson.jpg",
-   "../assets/images/henry-waternoose.jpg",
-   "../assets/images/jerry.jpg",
-   "../assets/images/needleman-and-smitty.png",
-   "../assets/images/randall-boggs.jpg",
-   "../assets/images/roz.jpg",
-   "../assets/images/thaddeus-bile.png",
-   "../assets/images/celia-mae.png",
-   "../assets/images/charlie-proctor.png",
-   "../assets/images/fungus.jpg",
-   "../assets/images/george-sanderson.jpg",
-   "../assets/images/henry-waternoose.jpg",
-   "../assets/images/jerry.jpg",
-   "../assets/images/needleman-and-smitty.png",
-   "../assets/images/randall-boggs.jpg",
-   "../assets/images/roz.jpg",
-   "../assets/images/thaddeus-bile.png"
+   "./assets/images/celia-mae.png",
+   "./assets/images/charlie-proctor.png",
+   "./assets/images/fungus.jpg",
+   "./assets/images/george-sanderson.jpg",
+   "./assets/images/henry-waternoose.jpg",
+   "./assets/images/jerry.jpg",
+   "./assets/images/needleman-and-smitty.png",
+   "./assets/images/randall-boggs.jpg",
+   "./assets/images/roz.jpg",
+   "./assets/images/thaddeus-bile.png",
+   "./assets/images/celia-mae.png",
+   "./assets/images/charlie-proctor.png",
+   "./assets/images/fungus.jpg",
+   "./assets/images/george-sanderson.jpg",
+   "./assets/images/henry-waternoose.jpg",
+   "./assets/images/jerry.jpg",
+   "./assets/images/needleman-and-smitty.png",
+   "./assets/images/randall-boggs.jpg",
+   "./assets/images/roz.jpg",
+   "./assets/images/thaddeus-bile.png"
 ];
 
 function intitializeApp(){
-   $(".cards").on("click", handleCardClick);
+   $(".card").on("click", handleCardClick);
    $(".closeModal").on("click", resetStats);
 
    createCards();
@@ -58,7 +58,7 @@ function createCards(){
             .addClass("card");
          var cardFront = $("<div>")
             .addClass("card cardFront")
-            // .attr("background-image: url('" + monsterArray[monsterIndex] + "'");
+            .attr("style", "background-image: url('" + monsterArray[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
             .attr("style", "background-image: url('./assets/images/doors-only.png'");
