@@ -57,7 +57,7 @@ function createCards(){
          var newCard = $("<div>")
             .addClass("card");
          var cardFront = $("<div>")
-            .addClass("card cardFront")
+            .addClass("card cardFront hidden")
             .attr("style", "background-image: url('" + monsterArray[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
@@ -78,23 +78,23 @@ function handleCardClick(event){
 
    console.log(event.target);
 
-   var stopCheating = (event.target);
+   // var stopCheating = (event.target);
 
-   if($(stopCheating).hasClass("cardFront")){
-      return;
-   }
+   // if($(stopCheating).hasClass("cardFront")){
+   //    return;
+   // }
 
    if(firstCardClicked === null){
       firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
       firstCardClicked = $(event.currentTarget.firstElementChild);
-      firstImage = firstCardClicked.css("background-image");
+      firstImage = firstCardClicked.removeClass("hidden");
 
    } else{
       secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
       secondCardClicked = $(event.currentTarget.firstElementChild);
-      secondImage = secondCardClicked.css("background-image");
+      secondImage = secondCardClicked.removeClass("hidden");
 
       if(firstImage === secondImage){
 
