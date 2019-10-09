@@ -5,7 +5,7 @@ var secondCardClicked = null;
 var firstCardBack = null;
 var secondCardBack = null;
 var matches = null;
-var maxMatches = 9;
+var maxMatches = 10;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
@@ -34,13 +34,13 @@ var monsterArray = [
    "./assets/images/thaddeus-bile.png"
 ];
 
-function intitializeApp(){
+function intitializeApp() {
    createCards();
-   $(".card").on("click", handleCardClick);
+   $(".cardBack").on("click", handleCardClick);
    $(".closeModal").on("click", resetStats);
 }
 
-function createCards(){
+function createCards() {
    var totalCards = {
       rows: 4,
       cards: 5
@@ -48,15 +48,15 @@ function createCards(){
    var cardContainer = $(".cardContainer");
    var monsterIndex = 0;
 
-   for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++){
+   for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++) {
       var newRow = $("<div>")
          .addClass("row");
 
-      for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++){
+      for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++) {
          var newCard = $("<div>")
             .addClass("card");
          var cardFront = $("<div>")
-            .addClass("card cardFront hidden")
+            .addClass("card cardFront")
             .attr("style", "background-image: url('" + monsterArray[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
@@ -72,38 +72,42 @@ function createCards(){
    }
  }
 
-function handleCardClick(event){
+function handleCardClick(event) {
    console.log(event);
 
    console.log(event.target);
 
    var stopCheating = (event.target);
 
-   if($(stopCheating).hasClass("cardFront")){
+   if($(stopCheating).hasClass("cardFront")) {
+      return;
+   }
+
+   if(secondCardClicked) {
+      firstCardClicked.removeClass("hidden");
+      secondCardClicked.removeClass("hidden");
       return;
    }
 
    $(event.currentTarget).addClass('hidden');
 
-   // if(firstCardClicked === null){
-   //    firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+   if(firstCardClicked === null) {
+      // firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
-   //    firstCardClicked = $(event.currentTarget);
-   //    firstImage = firstCardClicked.removeClass("hidden");
+      firstCardClicked = $(event.currentTarget);
 
-   // } else{
-   //    secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+   } else {
+      // secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
-   //    secondCardClicked = $(event.currentTarget);
-   //    secondImage = secondCardClicked.removeClass("hidden");
+      secondCardClicked = $(event.currentTarget);
 
-   //    firstImage = firstCardClicked.next().css("background-image");
-   //    secondImage = secondCardClicked.next().css("background-image");
+      firstImage = firstCardClicked.siblings().css("background-image");
+      secondImage = secondCardClicked.siblings().css("background-image");
 
-      // var firstImage = firstCardClicked.next().css("background-image");
-      // var secondImage = secondCardClicked.next().css("background-image");
+      console.log("first image: ", firstImage);
+      console.log("second image: ", secondImage);
 
-      if(firstImage === secondImage){
+      if(firstImage === secondImage) {
 
          console.log("cards match");
          firstCardClicked = null;
@@ -114,7 +118,7 @@ function handleCardClick(event){
          attempts++;
          calculateAccuracy();
 
-      } else{
+      } else {
          console.log("flip card back");
          setTimeout(flipCardBack, 800);
          attempts++;
@@ -126,15 +130,15 @@ function handleCardClick(event){
 
    }
 
-   if(matches === maxMatches){
+   if(matches === maxMatches) {
       $(".modalContainer").removeClass("hidden");
    }
 
 }
 
-function flipCardBack(){
-   firstCardBack.removeClass("hidden");
-   secondCardBack.removeClass("hidden");
+function flipCardBack() {
+   firstCardClicked.removeClass("hidden");
+   secondCardClicked.removeClass("hidden");
    firstCardBack = null;
    secondCardBack = null;
    firstCardClicked = null;
@@ -143,7 +147,7 @@ function flipCardBack(){
    secondImage = null;
 }
 
-function resetStats(){
+function resetStats() {
    $(".modalContainer").addClass("hidden");
    $(".cardBack").removeClass("hidden");
    firstCardBack = null;
@@ -162,12 +166,12 @@ function resetStats(){
    $(".attempts").text(attempts);
 }
 
-function calculateAccuracy(){
+function calculateAccuracy() {
    accuracy = (matches / attempts) * 100;
    return;
 }
 
-function displayStats(){
+function displayStats() {
       calculateAccuracy();
       $(".accuracy").text(accuracy.toFixed(2) + "%");
       $(".attempts").text(attempts);
