@@ -35,10 +35,9 @@ var monsterArray = [
 ];
 
 function intitializeApp(){
+   createCards();
    $(".card").on("click", handleCardClick);
    $(".closeModal").on("click", resetStats);
-
-   createCards();
 }
 
 function createCards(){
@@ -78,23 +77,28 @@ function handleCardClick(event){
 
    console.log(event.target);
 
-   // var stopCheating = (event.target);
+   var stopCheating = (event.target);
 
-   // if($(stopCheating).hasClass("cardFront")){
-   //    return;
-   // }
+   if($(stopCheating).hasClass("cardFront")){
+      return;
+   }
 
    if(firstCardClicked === null){
       firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
       firstCardClicked = $(event.currentTarget.firstElementChild);
       firstImage = firstCardClicked.removeClass("hidden");
+      firstImage = firstCardClicked.next().css("background-image");
 
    } else{
       secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
       secondCardClicked = $(event.currentTarget.firstElementChild);
       secondImage = secondCardClicked.removeClass("hidden");
+      secondImage = secondCardClicked.next().css("background-image");
+
+      // var firstImage = firstCardClicked.next().css("background-image");
+      // var secondImage = secondCardClicked.next().css("background-image");
 
       if(firstImage === secondImage){
 
