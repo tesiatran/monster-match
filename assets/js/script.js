@@ -83,19 +83,22 @@ function handleCardClick(event){
       return;
    }
 
-   if(firstCardClicked === null){
-      firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+   $(event.currentTarget).addClass('hidden');
 
-      firstCardClicked = $(event.currentTarget.firstElementChild);
-      firstImage = firstCardClicked.removeClass("hidden");
-      firstImage = firstCardClicked.next().css("background-image");
+   // if(firstCardClicked === null){
+   //    firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
 
-   } else{
-      secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+   //    firstCardClicked = $(event.currentTarget);
+   //    firstImage = firstCardClicked.removeClass("hidden");
 
-      secondCardClicked = $(event.currentTarget.firstElementChild);
-      secondImage = secondCardClicked.removeClass("hidden");
-      secondImage = secondCardClicked.next().css("background-image");
+   // } else{
+   //    secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+
+   //    secondCardClicked = $(event.currentTarget);
+   //    secondImage = secondCardClicked.removeClass("hidden");
+
+   //    firstImage = firstCardClicked.next().css("background-image");
+   //    secondImage = secondCardClicked.next().css("background-image");
 
       // var firstImage = firstCardClicked.next().css("background-image");
       // var secondImage = secondCardClicked.next().css("background-image");
