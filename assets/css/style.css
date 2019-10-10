@@ -12,7 +12,7 @@
       width: 100%;
       line-height: 1.25;
       color: rgb(41, 41, 41);
-      text-shadow: -5px 4px 5px rgb(219, 124, 228);
+      text-shadow: -5px 4px 5px rgb(255, 50, 195);
       font-weight: bold;
       font-family: 'Luckiest Guy', cursive;
       font-size: 8vmin;
@@ -39,7 +39,7 @@
       width: 98%;
       line-height: 2.5;
       color: rgb(41, 41, 41);
-      text-shadow: -3px 2px 5px rgb(219, 124, 228);
+      text-shadow: -3px 2px 5px rgb(255, 50, 195);
       font-weight: bold;
       font-family: 'Luckiest Guy', cursive;
       font-size: 3vmin;
@@ -79,6 +79,10 @@
       box-shadow: 0 5px 5px rgb(100, 100, 100);
    }
 
+   .card:hover {
+      box-shadow: 0 5px 5px rgb(255, 50, 195);
+   }
+
    .cardFront {
       height: 100%;
       width: 100%;
@@ -103,7 +107,6 @@
       left: 0;
       top: 0;
       width: 100%;
-      /* height: 100%; */
       overflow: auto;
       background-color: rgb(0,0,0);
       background-color: rgba(0, 0, 0, 0.404);
@@ -111,7 +114,7 @@
 
    .modalContent {
       background-color: rgba(255, 255, 255, 0.808);
-      margin: 15% auto;
+      margin: 10% auto;
       padding: 20px;
       border: 2px solid rgb(41, 41, 41);
       width: 50%;
@@ -122,22 +125,37 @@
    }
 
    .closeModal {
-      color: rgb(239, 104, 208);
+      color: floralwhite;
       font-size: 2.5vmin;
-      font-weight: bold;
       font-family: 'Luckiest Guy', cursive;
-      border: 1px solid rgb(41, 41, 41);
-      background-color: rgba(255, 255, 255, 0.575);
-      border-radius: 8px;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   .closeModal:hover {
+      box-shadow: 0 0 2px 2px rgba(255, 50, 195);
+      color: rgb(255, 70, 200);
+   }
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
    }
 
    .win {
-      height: 300px;
-      max-width: auto;
+      height: 350px;
+      width: 98%;
       background-image: url(../images/boo-sully-hug.jpg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: auto;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
    }
 
    .hidden {
