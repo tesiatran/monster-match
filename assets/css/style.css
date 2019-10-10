@@ -97,7 +97,7 @@
       background-repeat: no-repeat;
    }
 
-   .modalContainer{
+   .modalContainer {
       position: fixed;
       z-index: 1;
       left: 0;
@@ -106,25 +106,39 @@
       height: 100%;
       overflow: auto;
       background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0,0.4);
+      background-color: rgba(0, 0, 0, 0.404);
     }
 
-    .modalContent{
-      background-color: #fefefe;
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
       margin: 15% auto;
       padding: 20px;
-      border: 1px solid black;
+      border: 2px solid rgb(41, 41, 41);
       width: 50%;
-      font-size: 30px;
-    }
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
 
-    .closeModal{
-      color: white;
-      font-size: 15px;
+   .closeModal {
+      color: rgb(239, 104, 208);
+      font-size: 2.5vmin;
       font-weight: bold;
-      border: 1px solid black;
-      background-color: black;
-    }
+      font-family: 'Luckiest Guy', cursive;
+      border: 1px solid rgb(41, 41, 41);
+      background-color: rgba(255, 255, 255, 0.575);
+      border-radius: 8px;
+   }
+
+   .win {
+      height: 100%;
+      width: 100%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+   }
 
    .hidden {
       display: none;

@@ -3,7 +3,7 @@ $(document).ready(intitializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
-var maxMatches = 16;
+var maxMatches = 1;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
@@ -150,9 +150,9 @@ function resetStats() {
    games++;
    $(".games").text(games);
    matches = null;
-   accuracy = null;
-   attempts = null;
-   $(".accuracy").text(accuracy);
+   accuracy = 0;
+   attempts = 0;
+   $(".accuracy").text(accuracy + "%");
    $(".attempts").text(attempts);
 }
 
@@ -163,7 +163,7 @@ function calculateAccuracy() {
 
 function displayStats() {
       calculateAccuracy();
-      $(".accuracy").text(accuracy.toFixed(2) + "%");
+      $(".accuracy").text(accuracy.toFixed(0) + "%");
       $(".attempts").text(attempts);
 }
 
