@@ -60,7 +60,7 @@ function createCards() {
             .attr("style", "background-image: url('" + monsterArray[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
-            .attr("style", "background-image: url('./assets/images/doors-only.png'");
+            .attr("style", "background-image: url('./assets/images/door-one.png'");
 
          newCard.append(cardFront);
          newCard.append(cardBack);
@@ -158,7 +158,7 @@ function resetStats() {
    secondImage = null;
    matches = null;
    gamesPlayed++;
-   $(".gamesPlayed").text(gamesPlayed);
+   $(".games").text(gamesPlayed);
    matches = null;
    accuracy = null;
    attempts = null;
