@@ -57,6 +57,7 @@ function createCards() {
    };
    var cardContainer = $(".cardContainer");
    var monsterIndex = 0;
+   var shuffledMonsters = shuffleCards();
 
    for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++) {
       var newRow = $("<div>")
@@ -67,7 +68,7 @@ function createCards() {
             .addClass("card");
          var cardFront = $("<div>")
             .addClass("card cardFront")
-            .attr("style", "background-image: url('" + monsterArray[monsterIndex] + "'");
+            .attr("style", "background-image: url('" + shuffledMonsters[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
             .attr("style", "background-image: url('./assets/images/boo-door-only.jpg'");
@@ -166,14 +167,13 @@ function displayStats() {
       $(".attempts").text(attempts);
 }
 
-function shuffleCards(cardArray) {
-   var counter = cardArray.length;
-   while (counter > 0) {
-      var cardIndex = Math.floor(Math.random() * counter);
-      counter--;
-      var newIndex = cardArray[counter];
-      cardArray[counter] = cardArray[cardIndex];
-      cardArray[cardIndex] = newIndex;
+function shuffleCards() {
+   var shuffledMonsterArray = [];
+   var monsters = monsterArray.length;
+   for (var cardIndex = 0; cardIndex < 32; cardIndex++, monsters--) {
+      var randomIndex = Math.floor(Math.random() * monsters);
+      var randomMonster = monsterArray.splice(randomIndex, 1);
+      shuffledMonsterArray.push(randomMonster);
    }
-   return cardArray;
+   return shuffledMonsterArray;
 }
