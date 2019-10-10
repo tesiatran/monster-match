@@ -2,66 +2,76 @@ $(document).ready(intitializeApp);
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var firstCardBack = null;
-var secondCardBack = null;
 var matches = null;
-var maxMatches = 9;
+var maxMatches = 16;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
 var attempts = null;
-var gamesPlayed = null;
+var games = null;
 var monsterArray = [
-   "../assets/images/celia-mae.png",
-   "../assets/images/charlie-proctor.png",
-   "../assets/images/fungus.jpg",
-   "../assets/images/george-sanderson.jpg",
-   "../assets/images/henry-waternoose.jpg",
-   "../assets/images/jerry.jpg",
-   "../assets/images/needleman-and-smitty.png",
-   "../assets/images/randall-boggs.jpg",
-   "../assets/images/roz.jpg",
-   "../assets/images/thaddeus-bile.png",
-   "../assets/images/celia-mae.png",
-   "../assets/images/charlie-proctor.png",
-   "../assets/images/fungus.jpg",
-   "../assets/images/george-sanderson.jpg",
-   "../assets/images/henry-waternoose.jpg",
-   "../assets/images/jerry.jpg",
-   "../assets/images/needleman-and-smitty.png",
-   "../assets/images/randall-boggs.jpg",
-   "../assets/images/roz.jpg",
-   "../assets/images/thaddeus-bile.png"
+   "./assets/images/cda.jpg",
+   "./assets/images/celia-mae.png",
+   "./assets/images/charlie-proctor.png",
+   "./assets/images/flint.jpg",
+   "./assets/images/fungus.jpg",
+   "./assets/images/george-sanderson.jpg",
+   "./assets/images/henry-waternoose.jpg",
+   "./assets/images/james-sullivan.jpg",
+   "./assets/images/jerry.jpg",
+   "./assets/images/mike-wazowski.jpg",
+   "./assets/images/needleman.png",
+   "./assets/images/randall-boggs.jpg",
+   "./assets/images/roz.jpg",
+   "./assets/images/smitty.png",
+   "./assets/images/thaddeus-bile.png",
+   "./assets/images/yeti.jpg",
+   "./assets/images/cda.jpg",
+   "./assets/images/celia-mae.png",
+   "./assets/images/charlie-proctor.png",
+   "./assets/images/flint.jpg",
+   "./assets/images/fungus.jpg",
+   "./assets/images/george-sanderson.jpg",
+   "./assets/images/henry-waternoose.jpg",
+   "./assets/images/james-sullivan.jpg",
+   "./assets/images/jerry.jpg",
+   "./assets/images/mike-wazowski.jpg",
+   "./assets/images/needleman.png",
+   "./assets/images/randall-boggs.jpg",
+   "./assets/images/roz.jpg",
+   "./assets/images/smitty.png",
+   "./assets/images/thaddeus-bile.png",
+   "./assets/images/yeti.jpg",
 ];
 
-function intitializeApp(){
-   $(".cards").on("click", handleCardClick);
-   $(".closeModal").on("click", resetStats);
-
+function intitializeApp() {
    createCards();
+   $(".cardBack").on("click", handleCardClick);
+   $(".closeModal").on("click", resetStats);
 }
 
-function createCards(){
+function createCards() {
    var totalCards = {
       rows: 4,
-      cards: 5
+      cards: 8
    };
    var cardContainer = $(".cardContainer");
    var monsterIndex = 0;
+   var shuffledMonsters = shuffleCards();
 
-   for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++){
+   for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++) {
       var newRow = $("<div>")
          .addClass("row");
 
-      for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++){
+      for(var cardIndex = 0; cardIndex < totalCards.cards; cardIndex++) {
          var newCard = $("<div>")
             .addClass("card");
          var cardFront = $("<div>")
             .addClass("card cardFront")
-            // .attr("background-image: url('" + monsterArray[monsterIndex] + "'");
+            .attr("style", "background-image: url('" + shuffledMonsters[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
-            .attr("style", "background-image: url('./assets/images/doors-only.png'");
+            .attr("style", "background-image: url('./assets/images/boo-door-only.jpg'");
 
          newCard.append(cardFront);
          newCard.append(cardBack);
@@ -73,31 +83,32 @@ function createCards(){
    }
  }
 
-function handleCardClick(event){
-   console.log(event);
-
-   console.log(event.target);
-
+function handleCardClick(event) {
    var stopCheating = (event.target);
-
-   if($(stopCheating).hasClass("cardFront")){
+   if($(stopCheating).hasClass("cardFront")) {
       return;
    }
 
-   if(firstCardClicked === null){
-      firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+   if(secondCardClicked) {
+      firstCardClicked.removeClass("hidden");
+      secondCardClicked.removeClass("hidden");
+      return;
+   }
 
-      firstCardClicked = $(event.currentTarget.firstElementChild);
-      firstImage = firstCardClicked.css("background-image");
+   $(event.currentTarget).addClass('hidden');
 
-   } else{
-      secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
+   if(firstCardClicked === null) {
+      firstCardClicked = $(event.currentTarget);
+   } else {
+      secondCardClicked = $(event.currentTarget);
 
-      secondCardClicked = $(event.currentTarget.firstElementChild);
-      secondImage = secondCardClicked.css("background-image");
+      firstImage = firstCardClicked.siblings().css("background-image");
+      secondImage = secondCardClicked.siblings().css("background-image");
 
-      if(firstImage === secondImage){
+      console.log("first image: ", firstImage);
+      console.log("second image: ", secondImage);
 
+      if(firstImage === secondImage) {
          console.log("cards match");
          firstCardClicked = null;
          secondCardClicked = null;
@@ -106,48 +117,38 @@ function handleCardClick(event){
          matches++;
          attempts++;
          calculateAccuracy();
-
-      } else{
+      } else {
          console.log("flip card back");
          setTimeout(flipCardBack, 800);
          attempts++;
          calculateAccuracy();
-
       }
-
       displayStats();
-
    }
-
-   if(matches === maxMatches){
+   if(matches === maxMatches) {
       $(".modalContainer").removeClass("hidden");
    }
-
 }
 
-function flipCardBack(){
-   firstCardBack.removeClass("hidden");
-   secondCardBack.removeClass("hidden");
-   firstCardBack = null;
-   secondCardBack = null;
+function flipCardBack() {
+   firstCardClicked.removeClass("hidden");
+   secondCardClicked.removeClass("hidden");
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
    secondImage = null;
 }
 
-function resetStats(){
+function resetStats() {
    $(".modalContainer").addClass("hidden");
    $(".cardBack").removeClass("hidden");
-   firstCardBack = null;
-   secondCardBack = null;
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
    secondImage = null;
    matches = null;
-   gamesPlayed++;
-   $(".gamesPlayed").text(gamesPlayed);
+   games++;
+   $(".games").text(games);
    matches = null;
    accuracy = null;
    attempts = null;
@@ -155,26 +156,24 @@ function resetStats(){
    $(".attempts").text(attempts);
 }
 
-function calculateAccuracy(){
+function calculateAccuracy() {
    accuracy = (matches / attempts) * 100;
    return;
 }
 
-function displayStats(){
+function displayStats() {
       calculateAccuracy();
       $(".accuracy").text(accuracy.toFixed(2) + "%");
       $(".attempts").text(attempts);
-      // $(".gamesPlayed").text(gamesPlayed);
 }
 
-function shuffleCards(cardArray) {
-   var counter = cardArray.length;
-   while (counter > 0) {
-      var cardIndex = Math.floor(Math.random() * counter);
-      counter--;
-      var newIndex = cardArray[counter];
-      cardArray[counter] = cardArray[cardIndex];
-      cardArray[cardIndex] = newIndex;
+function shuffleCards() {
+   var shuffledMonsterArray = [];
+   var monsters = monsterArray.length;
+   for (var cardIndex = 0; cardIndex < 32; cardIndex++, monsters--) {
+      var randomIndex = Math.floor(Math.random() * monsters);
+      var randomMonster = monsterArray.splice(randomIndex, 1);
+      shuffledMonsterArray.push(randomMonster);
    }
-   return cardArray;
+   return shuffledMonsterArray;
 }
