@@ -2,36 +2,46 @@ $(document).ready(intitializeApp);
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var firstCardBack = null;
-var secondCardBack = null;
 var matches = null;
-var maxMatches = 10;
+var maxMatches = 16;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
 var attempts = null;
-var gamesPlayed = null;
+var games = null;
 var monsterArray = [
+   "./assets/images/cda.jpg",
    "./assets/images/celia-mae.png",
    "./assets/images/charlie-proctor.png",
+   "./assets/images/flint.jpg",
    "./assets/images/fungus.jpg",
    "./assets/images/george-sanderson.jpg",
    "./assets/images/henry-waternoose.jpg",
+   "./assets/images/james-sullivan.jpg",
    "./assets/images/jerry.jpg",
-   "./assets/images/needleman-and-smitty.png",
+   "./assets/images/mike-wazowski.jpg",
+   "./assets/images/needleman.png",
    "./assets/images/randall-boggs.jpg",
    "./assets/images/roz.jpg",
+   "./assets/images/smitty.png",
    "./assets/images/thaddeus-bile.png",
+   "./assets/images/yeti.jpg",
+   "./assets/images/cda.jpg",
    "./assets/images/celia-mae.png",
    "./assets/images/charlie-proctor.png",
+   "./assets/images/flint.jpg",
    "./assets/images/fungus.jpg",
    "./assets/images/george-sanderson.jpg",
    "./assets/images/henry-waternoose.jpg",
+   "./assets/images/james-sullivan.jpg",
    "./assets/images/jerry.jpg",
-   "./assets/images/needleman-and-smitty.png",
+   "./assets/images/mike-wazowski.jpg",
+   "./assets/images/needleman.png",
    "./assets/images/randall-boggs.jpg",
    "./assets/images/roz.jpg",
-   "./assets/images/thaddeus-bile.png"
+   "./assets/images/smitty.png",
+   "./assets/images/thaddeus-bile.png",
+   "./assets/images/yeti.jpg",
 ];
 
 function intitializeApp() {
@@ -43,7 +53,7 @@ function intitializeApp() {
 function createCards() {
    var totalCards = {
       rows: 4,
-      cards: 5
+      cards: 8
    };
    var cardContainer = $(".cardContainer");
    var monsterIndex = 0;
@@ -60,7 +70,7 @@ function createCards() {
             .attr("style", "background-image: url('" + monsterArray[monsterIndex] + "'");
          var cardBack = $("<div>")
             .addClass("card cardBack")
-            .attr("style", "background-image: url('./assets/images/door-one.png'");
+            .attr("style", "background-image: url('./assets/images/boo-door-only.jpg'");
 
          newCard.append(cardFront);
          newCard.append(cardBack);
@@ -73,12 +83,7 @@ function createCards() {
  }
 
 function handleCardClick(event) {
-   console.log(event);
-
-   console.log(event.target);
-
    var stopCheating = (event.target);
-
    if($(stopCheating).hasClass("cardFront")) {
       return;
    }
@@ -92,13 +97,8 @@ function handleCardClick(event) {
    $(event.currentTarget).addClass('hidden');
 
    if(firstCardClicked === null) {
-      // firstCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
-
       firstCardClicked = $(event.currentTarget);
-
    } else {
-      // secondCardBack = $(event.currentTarget.lastElementChild).addClass("hidden");
-
       secondCardClicked = $(event.currentTarget);
 
       firstImage = firstCardClicked.siblings().css("background-image");
@@ -108,7 +108,6 @@ function handleCardClick(event) {
       console.log("second image: ", secondImage);
 
       if(firstImage === secondImage) {
-
          console.log("cards match");
          firstCardClicked = null;
          secondCardClicked = null;
@@ -117,30 +116,22 @@ function handleCardClick(event) {
          matches++;
          attempts++;
          calculateAccuracy();
-
       } else {
          console.log("flip card back");
          setTimeout(flipCardBack, 800);
          attempts++;
          calculateAccuracy();
-
       }
-
       displayStats();
-
    }
-
    if(matches === maxMatches) {
       $(".modalContainer").removeClass("hidden");
    }
-
 }
 
 function flipCardBack() {
    firstCardClicked.removeClass("hidden");
    secondCardClicked.removeClass("hidden");
-   firstCardBack = null;
-   secondCardBack = null;
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
@@ -150,15 +141,13 @@ function flipCardBack() {
 function resetStats() {
    $(".modalContainer").addClass("hidden");
    $(".cardBack").removeClass("hidden");
-   firstCardBack = null;
-   secondCardBack = null;
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
    secondImage = null;
    matches = null;
-   gamesPlayed++;
-   $(".games").text(gamesPlayed);
+   games++;
+   $(".games").text(games);
    matches = null;
    accuracy = null;
    attempts = null;
@@ -175,7 +164,6 @@ function displayStats() {
       calculateAccuracy();
       $(".accuracy").text(accuracy.toFixed(2) + "%");
       $(".attempts").text(attempts);
-      // $(".gamesPlayed").text(gamesPlayed);
 }
 
 function shuffleCards(cardArray) {
