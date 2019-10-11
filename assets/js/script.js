@@ -3,7 +3,7 @@ $(document).ready(intitializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
-var maxMatches = 16;
+var maxMatches = 1;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
@@ -45,19 +45,19 @@ var monsterArray = [
 ];
 
 function intitializeApp() {
-   createCards();
+   var shuffledMonsters = shuffleCards(monsterArray);
+   createCards(shuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeModal").on("click", resetStats);
+   $(".closeModal").on("click", resetGame);
 }
 
-function createCards() {
+function createCards(arrayOfMonsters) {
    var totalCards = {
       rows: 4,
       cards: 8
    };
    var cardContainer = $(".cardContainer");
    var monsterIndex = 0;
-   var shuffledMonsters = shuffleCards();
 
    for(var rowIndex = 0; rowIndex < totalCards.rows; rowIndex++) {
       var newRow = $("<div>")
@@ -68,10 +68,10 @@ function createCards() {
             .addClass("card");
          var cardFront = $("<div>")
             .addClass("card cardFront")
-            .attr("style", "background-image: url('" + shuffledMonsters[monsterIndex] + "'");
+            .attr("style", "background-image: url('" + arrayOfMonsters[monsterIndex] + "')");
          var cardBack = $("<div>")
             .addClass("card cardBack")
-            .attr("style", "background-image: url('./assets/images/boo-door-only.jpg'");
+            .attr("style", "background-image: url('./assets/images/boo-door-only.jpg')");
 
          newCard.append(cardFront);
          newCard.append(cardBack);
@@ -84,8 +84,7 @@ function createCards() {
  }
 
 function handleCardClick(event) {
-   var stopCheating = (event.target);
-   if($(stopCheating).hasClass("cardFront")) {
+   if($((event.target)).hasClass("cardFront")) {
       return;
    }
 
@@ -95,7 +94,7 @@ function handleCardClick(event) {
       return;
    }
 
-   $(event.currentTarget).addClass('hidden');
+   $(event.currentTarget).addClass("flip");
 
    if(firstCardClicked === null) {
       firstCardClicked = $(event.currentTarget);
@@ -131,17 +130,17 @@ function handleCardClick(event) {
 }
 
 function flipCardBack() {
-   firstCardClicked.removeClass("hidden");
-   secondCardClicked.removeClass("hidden");
+   firstCardClicked.removeClass("flip");
+   secondCardClicked.removeClass("flip");
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
    secondImage = null;
 }
 
-function resetStats() {
+function resetGame() {
    $(".modalContainer").addClass("hidden");
-   $(".cardBack").removeClass("hidden");
+   $(".cardBack").removeClass("flip");
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
@@ -150,10 +149,15 @@ function resetStats() {
    games++;
    $(".games").text(games);
    matches = null;
-   accuracy = null;
-   attempts = null;
-   $(".accuracy").text(accuracy);
+   accuracy = 0;
+   attempts = 0;
+   $(".accuracy").text(accuracy + "%");
    $(".attempts").text(attempts);
+   $(".cardContainer").empty();
+   var reshuffledMonsters = shuffleCards(monsterArray);
+   createCards(reshuffledMonsters);
+   $(".cardBack").on("click", handleCardClick);
+   $(".closeModal").on("click", resetGame);
 }
 
 function calculateAccuracy() {
@@ -163,17 +167,18 @@ function calculateAccuracy() {
 
 function displayStats() {
       calculateAccuracy();
-      $(".accuracy").text(accuracy.toFixed(2) + "%");
+      $(".accuracy").text(accuracy.toFixed(0) + "%");
       $(".attempts").text(attempts);
 }
 
-function shuffleCards() {
-   var shuffledMonsterArray = [];
-   var monsters = monsterArray.length;
-   for (var cardIndex = 0; cardIndex < 32; cardIndex++, monsters--) {
-      var randomIndex = Math.floor(Math.random() * monsters);
-      var randomMonster = monsterArray.splice(randomIndex, 1);
-      shuffledMonsterArray.push(randomMonster);
+function shuffleCards(shuffledMonsterArray) {
+   var currentIndex = shuffledMonsterArray.length;
+   while(0 !== currentIndex) {
+      var randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      var randomMonster = shuffledMonsterArray[currentIndex];
+      shuffledMonsterArray[currentIndex] = shuffledMonsterArray[randomIndex];
+      shuffledMonsterArray[randomIndex] = randomMonster;
    }
    return shuffledMonsterArray;
 }

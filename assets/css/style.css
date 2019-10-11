@@ -12,7 +12,7 @@
       width: 100%;
       line-height: 1.25;
       color: rgb(41, 41, 41);
-      text-shadow: -5px 4px 5px rgb(219, 124, 228);
+      text-shadow: -5px 4px 5px rgb(255, 50, 195);
       font-weight: bold;
       font-family: 'Luckiest Guy', cursive;
       font-size: 8vmin;
@@ -39,7 +39,7 @@
       width: 98%;
       line-height: 2.5;
       color: rgb(41, 41, 41);
-      text-shadow: -3px 2px 5px rgb(219, 124, 228);
+      text-shadow: -3px 2px 5px rgb(255, 50, 195);
       font-weight: bold;
       font-family: 'Luckiest Guy', cursive;
       font-size: 3vmin;
@@ -59,7 +59,7 @@
       width: 79%;
       display: inline-block;
       vertical-align: bottom;
-      margin-left: 15px;
+      margin-left: 10px;
    }
 
    .row {
@@ -70,63 +70,770 @@
    }
 
    .card {
-      height: 100%;
       width: 20%;
       display: inline-block;
       position: relative;
-      margin: 2px;
+      margin: 5px;
       border-radius: 15px;
-      box-shadow: 0 5px 5px rgb(100, 100, 100);
+      transition: all 0.3s ease-in-out;
    }
 
-   .cardFront {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
+   /* .card:hover > .cardBack {
+      box-shadow: 0 0 5px 5px rgb(255, 50, 195);
+      transform: scale(1.03);
+      transition: all .1s ease-in-out;
+      cursor: pointer;
+   } */
+
+   .flip {
+      transform: rotateY(180deg);
    }
 
+   .cardFront,
    .cardBack {
       height: 100%;
       width: 100%;
       position: absolute;
-      background-size: contain;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
    }
 
-   .modalContainer{
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
       position: fixed;
       z-index: 1;
       left: 0;
       top: 0;
       width: 100%;
-      height: 100%;
       overflow: auto;
       background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0,0.4);
-    }
+      background-color: rgba(0, 0, 0, 0.404);
+   }
 
-    .modalContent{
-      background-color: #fefefe;
-      margin: 15% auto;
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 10% auto;
       padding: 20px;
-      border: 1px solid black;
+      border: 2px solid rgb(41, 41, 41);
       width: 50%;
-      font-size: 30px;
-    }
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
 
-    .closeModal{
-      color: white;
-      font-size: 15px;
-      font-weight: bold;
-      border: 1px solid black;
-      background-color: black;
-    }
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   .closeModal:hover {
+      box-shadow: 0 0 2px 2px rgba(255, 50, 195);
+      color: rgb(255, 70, 200);
+   }
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
+   }
+
+   .win {
+      height: 350px;
+      width: 98%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+   }
 
    .hidden {
       display: none;
-    }
+   }
+}
+
+/* ipad: landscape */
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+   body {
+      background-image: url(../images/scare-factory.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+   }
+
+   .titleContainer {
+      height: 10vh;
+      width: 100%;
+      line-height: 1.25;
+      color: rgb(41, 41, 41);
+      text-shadow: -5px 4px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8vmin;
+      text-align: center;
+   }
+
+   .gameContainer {
+      height: 87vh;
+      width: 100%;
+      display: inline-block;
+      padding-top: 8px;
+   }
+
+   .statsContainer {
+      height: 100%;
+      width: 19%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .stats {
+      height: 8vh;
+      width: 98%;
+      line-height: 2.5;
+      color: rgb(41, 41, 41);
+      text-shadow: -3px 2px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3vmin;
+      text-align: center;
+   }
+
+   .games,
+   .attempts,
+   .accuracy {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.575);
+   }
+
+   .cardContainer {
+      height: 100%;
+      width: 79%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .row {
+      display: flex;
+      height: 23%;
+      width: 99%;
+      margin: 5px;
+   }
+
+   .card {
+      width: 20%;
+      display: inline-block;
+      position: relative;
+      margin: 5px;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   /* .card:hover > .cardBack {
+      box-shadow: 0 0 5px 5px rgb(255, 50, 195);
+      transform: scale(1.03);
+      transition: all .1s ease-in-out;
+      cursor: pointer;
+   } */
+
+   .flip {
+      transform: rotateY(180deg);
+   }
+
+   .cardFront,
+   .cardBack {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 10% auto;
+      padding: 20px;
+      border: 2px solid rgb(41, 41, 41);
+      width: 50%;
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   /* .closeModal:hover {
+      box-shadow: 0 0 2px 2px rgba(255, 50, 195);
+      color: rgb(255, 70, 200);
+   } */
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
+   }
+
+   .win {
+      height: 350px;
+      width: 98%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+   }
+
+   .hidden {
+      display: none;
+   }
+}
+
+/* ipad: portrait */
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+   body {
+      background-image: url(../images/scare-factory.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+   }
+
+   .titleContainer {
+      height: 10vh;
+      width: 100%;
+      line-height: 1.25;
+      color: rgb(41, 41, 41);
+      text-shadow: -5px 4px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8vmin;
+      text-align: center;
+   }
+
+   .gameContainer {
+      height: 87vh;
+      width: 100%;
+      display: inline-block;
+      padding-top: 8px;
+   }
+
+   .statsContainer {
+      height: 100%;
+      width: 19%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .stats {
+      height: 8vh;
+      width: 98%;
+      line-height: 2.5;
+      color: rgb(41, 41, 41);
+      text-shadow: -3px 2px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3vmin;
+      text-align: center;
+   }
+
+   .games,
+   .attempts,
+   .accuracy {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.575);
+   }
+
+   .cardContainer {
+      height: 100%;
+      width: 79%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .row {
+      display: flex;
+      height: 23%;
+      width: 99%;
+      margin: 5px;
+   }
+
+   .card {
+      width: 20%;
+      display: inline-block;
+      position: relative;
+      margin: 5px;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   /* .card:hover > .cardBack {
+      box-shadow: 0 0 5px 5px rgb(255, 50, 195);
+      transform: scale(1.03);
+      transition: all .1s ease-in-out;
+      cursor: pointer;
+   } */
+
+   .flip {
+      transform: rotateY(180deg);
+   }
+
+   .cardFront,
+   .cardBack {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 10% auto;
+      padding: 20px;
+      border: 2px solid rgb(41, 41, 41);
+      width: 50%;
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   /* .closeModal:hover {
+      box-shadow: 0 0 2px 2px rgba(255, 50, 195);
+      color: rgb(255, 70, 200);
+   } */
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
+   }
+
+   .win {
+      height: 350px;
+      width: 98%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+   }
+
+   .hidden {
+      display: none;
+   }
+}
+
+/* iphone 6/7/8: landscape */
+@media only screen and (min-width: 667px) and (max-width: 700px) {
+   body {
+      background-image: url(../images/scare-factory.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+   }
+
+   .titleContainer {
+      height: 10vh;
+      width: 100%;
+      line-height: 1.25;
+      color: rgb(41, 41, 41);
+      text-shadow: -5px 4px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8vmin;
+      text-align: center;
+   }
+
+   .gameContainer {
+      height: 87vh;
+      width: 100%;
+      display: inline-block;
+      padding-top: 8px;
+   }
+
+   .statsContainer {
+      height: 100%;
+      width: 19%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .stats {
+      height: 8vh;
+      width: 98%;
+      line-height: 2.5;
+      color: rgb(41, 41, 41);
+      text-shadow: -3px 2px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3vmin;
+      text-align: center;
+   }
+
+   .games,
+   .attempts,
+   .accuracy {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.575);
+   }
+
+   .cardContainer {
+      height: 100%;
+      width: 79%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .row {
+      display: flex;
+      height: 23%;
+      width: 99%;
+      margin: 5px;
+   }
+
+   .card {
+      width: 20%;
+      display: inline-block;
+      position: relative;
+      margin: 5px;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   /* .card:hover > .cardBack {
+      box-shadow: 0 0 5px 5px rgb(255, 50, 195);
+      transform: scale(1.03);
+      transition: all .1s ease-in-out;
+      cursor: pointer;
+   } */
+
+   .flip {
+      transform: rotateY(180deg);
+   }
+
+   .cardFront,
+   .cardBack {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 10% auto;
+      padding: 20px;
+      border: 2px solid rgb(41, 41, 41);
+      width: 50%;
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   /* .closeModal:hover {
+      box-shadow: 0 0 2px 2px rgba(255, 50, 195);
+      color: rgb(255, 70, 200);
+   } */
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
+   }
+
+   .win {
+      height: 350px;
+      width: 98%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+   }
+
+   .hidden {
+      display: none;
+   }
+}
+
+/* iphone 6/7/8: portrait */
+@media only screen and (min-width: 375px) and (max-width: 600px) {
+   body {
+      background-image: url(../images/scare-factory.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+   }
+
+   .titleContainer {
+      height: 10vh;
+      width: 100%;
+      line-height: 1.25;
+      color: rgb(41, 41, 41);
+      text-shadow: -5px 4px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8vmin;
+      text-align: center;
+   }
+
+   .gameContainer {
+      height: 87vh;
+      width: 100%;
+      display: inline-block;
+      padding-top: 8px;
+   }
+
+   .statsContainer {
+      height: 100%;
+      width: 19%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .stats {
+      height: 8vh;
+      width: 98%;
+      line-height: 2.5;
+      color: rgb(41, 41, 41);
+      text-shadow: -3px 2px 5px rgb(255, 50, 195);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3vmin;
+      text-align: center;
+   }
+
+   .games,
+   .attempts,
+   .accuracy {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.575);
+   }
+
+   .cardContainer {
+      height: 100%;
+      width: 79%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 10px;
+   }
+
+   .row {
+      display: flex;
+      height: 23%;
+      width: 99%;
+      margin: 5px;
+   }
+
+   .card {
+      width: 20%;
+      display: inline-block;
+      position: relative;
+      margin: 5px;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   /* .card:hover > .cardBack {
+      box-shadow: 0 0 5px 5px rgb(255, 50, 195);
+      transform: scale(1.03);
+      transition: all .1s ease-in-out;
+      cursor: pointer;
+   } */
+
+   .flip {
+      transform: rotateY(180deg);
+   }
+
+   .cardFront,
+   .cardBack {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 10% auto;
+      padding: 20px;
+      border: 2px solid rgb(41, 41, 41);
+      width: 50%;
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   /* .closeModal:hover {
+      box-shadow: 0 0 2px 2px rgba(255, 50, 195);
+      color: rgb(255, 70, 200);
+   } */
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
+   }
+
+   .win {
+      height: 350px;
+      width: 98%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+   }
+
+   .hidden {
+      display: none;
+   }
 }
