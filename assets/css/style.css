@@ -59,7 +59,7 @@
       width: 79%;
       display: inline-block;
       vertical-align: bottom;
-      margin-left: 15px;
+      margin-left: 10px;
    }
 
    .row {
@@ -70,41 +70,37 @@
    }
 
    .card {
-      height: 100%;
       width: 20%;
       display: inline-block;
       position: relative;
-      margin: 2px;
+      margin: 5px;
       border-radius: 15px;
-      box-shadow: 0 5px 5px rgb(100, 100, 100);
-      transition: all 0.5s ease;
+      transition: all 0.3s ease-in-out;
    }
 
-   .card:hover {
-      box-shadow: 0 5px 5px rgb(255, 50, 195);
+   /* .card:hover > .cardBack {
+      box-shadow: 0 0 5px 5px rgb(255, 50, 195);
+      transform: scale(1.03);
+      transition: all .1s ease-in-out;
       cursor: pointer;
-   }
+   } */
 
    .flip {
       transform: rotateY(180deg);
    }
 
-   .cardFront {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-   }
-
+   .cardFront,
    .cardBack {
       height: 100%;
       width: 100%;
       position: absolute;
-      background-size: contain;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
       backface-visibility: hidden;
    }
 

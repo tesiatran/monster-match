@@ -84,8 +84,7 @@ function createCards(arrayOfMonsters) {
  }
 
 function handleCardClick(event) {
-   var stopCheating = (event.target);
-   if($(stopCheating).hasClass("cardFront")) {
+   if($((event.target)).hasClass("cardFront")) {
       return;
    }
 
