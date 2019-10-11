@@ -47,7 +47,7 @@ var monsterArray = [
 function intitializeApp() {
    createCards();
    $(".cardBack").on("click", handleCardClick);
-   $(".closeModal").on("click", resetStats);
+   $(".closeModal").on("click", resetGame);
 }
 
 function createCards() {
@@ -95,7 +95,7 @@ function handleCardClick(event) {
       return;
    }
 
-   $(event.currentTarget).addClass('hidden');
+   $(event.currentTarget).addClass("flip");
 
    if(firstCardClicked === null) {
       firstCardClicked = $(event.currentTarget);
@@ -131,17 +131,17 @@ function handleCardClick(event) {
 }
 
 function flipCardBack() {
-   firstCardClicked.removeClass("hidden");
-   secondCardClicked.removeClass("hidden");
+   firstCardClicked.removeClass("flip");
+   secondCardClicked.removeClass("flip");
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
    secondImage = null;
 }
 
-function resetStats() {
+function resetGame() {
    $(".modalContainer").addClass("hidden");
-   $(".cardBack").removeClass("hidden");
+   $(".cardBack").removeClass("flip");
    firstCardClicked = null;
    secondCardClicked = null;
    firstImage = null;
@@ -154,6 +154,10 @@ function resetStats() {
    attempts = 0;
    $(".accuracy").text(accuracy + "%");
    $(".attempts").text(attempts);
+   $(".cardContainer").empty();
+   createCards();
+   $(".cardBack").on("click", handleCardClick);
+   $(".closeModal").on("click", resetGame);
 }
 
 function calculateAccuracy() {
