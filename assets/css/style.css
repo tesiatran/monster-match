@@ -402,13 +402,6 @@
       transition: all 0.3s ease-in-out;
    }
 
-   /* .card:hover > .cardBack {
-      box-shadow: 0 0 5px 5px rgb(10, 175, 180);
-      transform: scale(1.03);
-      transition: all .1s ease-in-out;
-      cursor: pointer;
-   } */
-
    .flip {
       transform: rotateY(180deg);
    }
@@ -461,11 +454,6 @@
       width: 50%;
       margin: auto;
    }
-
-   /* .closeModal:hover {
-      box-shadow: 0 0 2px 2px rgba(10, 175, 180);
-      color: rgb(10, 175, 180);
-   } */
 
    .winMessage {
       color: rgba(41, 41, 41);
@@ -569,13 +557,6 @@
       transition: all 0.3s ease-in-out;
    }
 
-   /* .card:hover > .cardBack {
-      box-shadow: 0 0 5px 5px rgb(10, 175, 180);
-      transform: scale(1.03);
-      transition: all .1s ease-in-out;
-      cursor: pointer;
-   } */
-
    .flip {
       transform: rotateY(180deg);
    }
@@ -629,11 +610,6 @@
       width: 50%;
       margin: auto;
    }
-
-   /* .closeModal:hover {
-      box-shadow: 0 0 2px 2px rgba(10, 175, 180);
-      color: rgb(10, 175, 180);
-   } */
 
    .winMessage {
       color: rgba(41, 41, 41);
@@ -738,13 +714,6 @@
       transition: all 0.3s ease-in-out;
    }
 
-   /* .card:hover > .cardBack {
-      box-shadow: 0 0 5px 5px rgb(10, 175, 180);
-      transform: scale(1.03);
-      transition: all .1s ease-in-out;
-      cursor: pointer;
-   } */
-
    .flip {
       transform: rotateY(180deg);
    }
@@ -797,11 +766,6 @@
       width: 50%;
       margin: auto;
    }
-
-   /* .closeModal:hover {
-      box-shadow: 0 0 2px 2px rgba(10, 175, 180);
-      color: rgb(10, 175, 180);
-   } */
 
    .winMessage {
       color: rgba(41, 41, 41);
