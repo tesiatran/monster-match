@@ -120,7 +120,7 @@
       border: 2px solid rgb(41, 41, 41);
       height: 55%;
       width: 50%;
-      font-size: 5vmin;
+      font-size: 5.5vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
       border-radius: 15px;
@@ -128,13 +128,14 @@
 
    .closeModal {
       color: floralwhite;
-      font-size: 2.5vmin;
+      font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
-      border: 5px solid rgb(41, 41, 41);
+      border: 8px solid rgb(41, 41, 41);
       background-color: rgba(41, 41, 41);
       border-radius: 7px;
       width: 50%;
       margin: auto;
+      cursor: pointer;
    }
 
    .closeModal:hover {
@@ -280,7 +281,7 @@
       border: 2px solid rgb(41, 41, 41);
       height: 55%;
       width: 60%;
-      font-size: 5vmin;
+      font-size: 6vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
       border-radius: 15px;
@@ -288,9 +289,9 @@
 
    .closeModal {
       color: floralwhite;
-      font-size: 2.5vmin;
+      font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
-      border: 5px solid rgb(41, 41, 41);
+      border: 8px solid rgb(41, 41, 41);
       background-color: rgba(41, 41, 41);
       border-radius: 7px;
       width: 50%;
@@ -299,8 +300,7 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 15px;
    }
 
    .win {
@@ -311,8 +311,8 @@
       background-position: center;
       background-size: cover;
       border-radius: 15px;
-      margin-top: 45px;
-      margin-bottom: 35px;
+      margin-top: -10px;
+      margin-bottom: 30px;
    }
 
    .hidden {
@@ -441,11 +441,11 @@
    .modalContent {
       background-color: rgba(255, 255, 255, 0.808);
       margin: 26% auto;
-      padding: 25px;
+      padding: 30px;
       border: 2px solid rgb(41, 41, 41);
       height: 50%;
       width: 55%;
-      font-size: 5vmin;
+      font-size: 5.75vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
       border-radius: 15px;
@@ -453,7 +453,7 @@
 
    .closeModal {
       color: floralwhite;
-      font-size: 2.5vmin;
+      font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
       border: 5px solid rgb(41, 41, 41);
       background-color: rgba(41, 41, 41);
@@ -464,8 +464,7 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 35px;
-      margin-bottom: 25px;
+      margin-top: 25px;
    }
 
    .win {
@@ -477,7 +476,7 @@
       background-size: cover;
       border-radius: 15px;
       margin-top: 45px;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
    }
 
    .hidden {
@@ -602,7 +601,7 @@
       border: 2px solid rgb(41, 41, 41);
       height: 50%;
       width: 55%;
-      font-size: 5vmin;
+      font-size: 6vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
       border-radius: 15px;
@@ -610,9 +609,9 @@
 
    .closeModal {
       color: floralwhite;
-      font-size: 2.5vmin;
+      font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
-      border: 5px solid rgb(41, 41, 41);
+      border: 6px solid rgb(41, 41, 41);
       background-color: rgba(41, 41, 41);
       border-radius: 7px;
       width: 50%;
@@ -621,8 +620,7 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 5px;
-      margin-bottom: 10px;
+      margin-top: 0px;
    }
 
    .win {
@@ -633,8 +631,8 @@
       background-position: center;
       background-size: cover;
       border-radius: 15px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: -5px;
+      margin-bottom: 17px;
    }
 
    .hidden {
@@ -660,25 +658,23 @@
       font-family: 'Luckiest Guy', cursive;
       font-size: 8vmin;
       text-align: center;
-      padding-top: 11px;
+      padding-top: 5px;
    }
 
    .gameContainer {
-      height: 87vh;
+      height: 89vh;
       width: 100%;
       display: inline-block;
-      padding-top: 20px;
+      padding-top: 12px;
    }
 
    .statsContainer {
-      height: 8%;
+      height: 6%;
       width: 100%;
-      display: inline-block;
-      vertical-align: bottom;
    }
 
    .stats {
-      height: 5vh;
+      height: 3vh;
       width: 13%;
       line-height: 1;
       color: rgb(41, 41, 41);
@@ -711,22 +707,24 @@
    }
 
    .cardContainer {
-      height: 92%;
+      height: 94%;
       width: 100%;
-      display: inline-block;
+      margin-left: 1px;
    }
 
    .row {
-      display: flex;
-      height: 24%;
-      width: 99%;
+      display: inline-block;
+      height: 100%;
+      width: 23.5%;
+      margin: 1.5px;
    }
 
    .card {
-      width: 11%;
+      height: 11%;
+      width: 100%;
       display: inline-block;
       position: relative;
-      margin: 3px;
+      margin: 2px;
       border-radius: 15px;
    }
 
@@ -763,12 +761,12 @@
 
    .modalContent {
       background-color: rgba(255, 255, 255, 0.808);
-      margin: 38% auto;
-      padding: 25px;
+      margin: 43% auto;
+      padding: 20px;
       border: 2px solid rgb(41, 41, 41);
-      height: 45%;
-      width: 60%;
-      font-size: 5vmin;
+      height: 40%;
+      width: 65%;
+      font-size: 6.5vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
       border-radius: 15px;
@@ -776,9 +774,9 @@
 
    .closeModal {
       color: floralwhite;
-      font-size: 2.5vmin;
+      font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
-      border: 5px solid rgb(41, 41, 41);
+      border: 6px solid rgb(41, 41, 41);
       background-color: rgba(41, 41, 41);
       border-radius: 7px;
       width: 50%;
@@ -787,8 +785,7 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 25px;
-      margin-bottom: 20px;
+      margin-top: 10px;
    }
 
    .win {
@@ -799,8 +796,8 @@
       background-position: center;
       background-size: cover;
       border-radius: 15px;
-      margin-top: 35px;
-      margin-bottom: 35px;
+      margin-top: 25px;
+      margin-bottom: 25px;
    }
 
    .hidden {
