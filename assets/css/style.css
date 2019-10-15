@@ -365,7 +365,7 @@
       font-size: 3vmin;
       text-align: center;
       display: inline-block;
-      vertical-align: top;
+      vertical-align: text-bottom;
    }
 
    .games,
@@ -652,7 +652,7 @@
    }
 
    .titleContainer {
-      height: 8vh;
+      height: 6vh;
       width: 100%;
       line-height: 1.25;
       color: rgb(41, 41, 41);
@@ -660,18 +660,18 @@
       font-family: 'Luckiest Guy', cursive;
       font-size: 8vmin;
       text-align: center;
-      padding-top: 25px;
+      padding-top: 11px;
    }
 
    .gameContainer {
-      height: 83vh;
+      height: 87vh;
       width: 100%;
       display: inline-block;
-      padding-top: 40px;
+      padding-top: 20px;
    }
 
    .statsContainer {
-      height: 10%;
+      height: 8%;
       width: 100%;
       display: inline-block;
       vertical-align: bottom;
@@ -679,7 +679,7 @@
 
    .stats {
       height: 5vh;
-      width: 14%;
+      width: 13%;
       line-height: 1;
       color: rgb(41, 41, 41);
       text-shadow: -3px 2px 3px rgb(127, 82, 216);
@@ -687,7 +687,7 @@
       font-size: 3vmin;
       text-align: center;
       display: inline-block;
-      vertical-align: top;
+      vertical-align: text-bottom;
    }
 
    .games,
@@ -696,21 +696,22 @@
       border: 2px solid rgb(41, 41, 41);
       border-radius: 15px;
       background-color: rgba(255, 255, 255, 0.575);
-      margin-right: 8px;
+      margin-right: 5px;
    }
 
    .gamesTitle,
    .attemptsTitle,
    .accuracyTitle {
-      margin-left: 12px;
+      margin-left: 5px;
    }
 
-   .attemptsTitle {
-      margin-right: 8px;
+   .attemptsTitle,
+   .accuracyTitle {
+      margin-right: 7px;
    }
 
    .cardContainer {
-      height: 85%;
+      height: 92%;
       width: 100%;
       display: inline-block;
    }
@@ -722,10 +723,10 @@
    }
 
    .card {
-      width: 12%;
+      width: 11%;
       display: inline-block;
       position: relative;
-      margin: 4px;
+      margin: 3px;
       border-radius: 15px;
       transition: all 0.3s ease-in-out;
    }
@@ -762,11 +763,11 @@
 
    .modalContent {
       background-color: rgba(255, 255, 255, 0.808);
-      margin: 26% auto;
+      margin: 38% auto;
       padding: 25px;
       border: 2px solid rgb(41, 41, 41);
-      height: 50%;
-      width: 55%;
+      height: 45%;
+      width: 60%;
       font-size: 5vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
@@ -786,8 +787,8 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 35px;
-      margin-bottom: 25px;
+      margin-top: 25px;
+      margin-bottom: 20px;
    }
 
    .win {
@@ -798,8 +799,8 @@
       background-position: center;
       background-size: cover;
       border-radius: 15px;
-      margin-top: 45px;
-      margin-bottom: 45px;
+      margin-top: 35px;
+      margin-bottom: 35px;
    }
 
    .hidden {
