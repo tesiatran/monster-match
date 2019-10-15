@@ -4,7 +4,7 @@
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: cover;
    }
 
    .titleContainer {
@@ -171,7 +171,7 @@
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: cover;
    }
 
    .titleContainer {
@@ -189,7 +189,7 @@
       height: 87vh;
       width: 100%;
       display: inline-block;
-      padding-top: 6px;
+      padding-top: 7px;
    }
 
    .statsContainer {
@@ -326,7 +326,329 @@
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: cover;
+   }
+
+   .titleContainer {
+      height: 8vh;
+      width: 100%;
+      line-height: 1.25;
+      color: rgb(41, 41, 41);
+      text-shadow: -5px 4px 5px rgb(127, 82, 216);
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8vmin;
+      text-align: center;
+      padding-top: 25px;
+   }
+
+   .gameContainer {
+      height: 84vh;
+      width: 100%;
+      display: inline-block;
+      padding-top: 41px;
+   }
+
+   .statsContainer {
+      height: 10%;
+      width: 100%;
+      display: inline-block;
+      vertical-align: bottom;
+   }
+
+   .stats {
+      height: 5vh;
+      width: 14%;
+      line-height: 1;
+      color: rgb(41, 41, 41);
+      text-shadow: -3px 2px 3px rgb(127, 82, 216);
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3vmin;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+   }
+
+   .games,
+   .attempts,
+   .accuracy {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.575);
+      margin-right: 8px;
+   }
+
+   .gamesTitle,
+   .attemptsTitle,
+   .accuracyTitle {
+      margin-left: 12px;
+   }
+
+   .attemptsTitle {
+      margin-right: 8px;
+   }
+
+   .cardContainer {
+      height: 85%;
+      width: 100%;
+      display: inline-block;
+   }
+
+   .row {
+      display: flex;
+      height: 24%;
+      width: 99%;
+   }
+
+   .card {
+      width: 12%;
+      display: inline-block;
+      position: relative;
+      margin: 4px;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   .flip {
+      transform: rotateY(180deg);
+   }
+
+   .cardFront,
+   .cardBack {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 26% auto;
+      padding: 25px;
+      border: 2px solid rgb(41, 41, 41);
+      height: 50%;
+      width: 55%;
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 35px;
+      margin-bottom: 25px;
+   }
+
+   .win {
+      height: 50%;
+      width: 100%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 15px;
+      margin-top: 45px;
+      margin-bottom: 45px;
+   }
+
+   .hidden {
+      display: none;
+   }
+}
+
+/* iphone 6/7/8: landscape */
+@media only screen and (min-width: 667px) and (max-width: 700px) {
+   body {
+      background-image: url(../images/scare-factory.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+
+   .titleContainer {
+      height: 10vh;
+      width: 100%;
+      line-height: 1.25;
+      color: rgb(41, 41, 41);
+      text-shadow: -5px 4px 5px rgb(127, 82, 216);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8vmin;
+      text-align: center;
+   }
+
+   .gameContainer {
+      height: 85vh;
+      width: 100%;
+      display: inline-block;
+      padding-top: 3px;
+   }
+
+   .statsContainer {
+      height: 100%;
+      width: 12%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 2px;
+   }
+
+   .stats {
+      height: 8vh;
+      width: 98%;
+      line-height: 2.5;
+      color: rgb(41, 41, 41);
+      text-shadow: -3px 2px 3px rgb(127, 82, 216);
+      font-weight: bold;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3vmin;
+      text-align: center;
+   }
+
+   .games,
+   .attempts,
+   .accuracy {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.575);
+   }
+
+   .cardContainer {
+      height: 100%;
+      width: 86%;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 2px;
+   }
+
+   .row {
+      display: flex;
+      height: 23%;
+      width: 99%;
+      margin: 4px;
+   }
+
+   .card {
+      width: 20%;
+      display: inline-block;
+      position: relative;
+      margin: 2px;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   .flip {
+      transform: rotateY(180deg);
+   }
+
+   .cardFront,
+   .cardBack {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 5px 5px rgb(100, 100, 100);
+   }
+
+   .cardBack {
+      backface-visibility: hidden;
+   }
+
+   .modalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .modalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 10% auto;
+      padding: 20px;
+      border: 2px solid rgb(41, 41, 41);
+      height: 50%;
+      width: 55%;
+      font-size: 5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .closeModal {
+      color: floralwhite;
+      font-size: 2.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 5px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+   }
+
+   .winMessage {
+      color: rgba(41, 41, 41);
+      margin-top: 5px;
+      margin-bottom: 10px;
+   }
+
+   .win {
+      height: 50%;
+      width: 100%;
+      background-image: url(../images/boo-sully-hug.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+   }
+
+   .hidden {
+      display: none;
+   }
+}
+
+/* iphone 6/7/8: portrait */
+@media only screen and (min-width: 375px) and (max-width: 600px) {
+   body {
+      background-image: url(../images/scare-factory.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
    }
 
    .titleContainer {
@@ -478,318 +800,6 @@
       border-radius: 15px;
       margin-top: 45px;
       margin-bottom: 45px;
-   }
-
-   .hidden {
-      display: none;
-   }
-}
-
-/* iphone 6/7/8: landscape */
-@media only screen and (min-width: 667px) and (max-width: 700px) {
-   body {
-      background-image: url(../images/scare-factory.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: auto;
-   }
-
-   .titleContainer {
-      height: 10vh;
-      width: 100%;
-      line-height: 1.25;
-      color: rgb(41, 41, 41);
-      text-shadow: -5px 4px 5px rgb(127, 82, 216);
-      font-weight: bold;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 8vmin;
-      text-align: center;
-   }
-
-   .gameContainer {
-      height: 85vh;
-      width: 100%;
-      display: inline-block;
-   }
-
-   .statsContainer {
-      height: 100%;
-      width: 12%;
-      display: inline-block;
-      vertical-align: bottom;
-      margin-left: 2px;
-   }
-
-   .stats {
-      height: 8vh;
-      width: 98%;
-      line-height: 2.5;
-      color: rgb(41, 41, 41);
-      text-shadow: -3px 2px 3px rgb(127, 82, 216);
-      font-weight: bold;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 3vmin;
-      text-align: center;
-   }
-
-   .games,
-   .attempts,
-   .accuracy {
-      border: 2px solid rgb(41, 41, 41);
-      border-radius: 15px;
-      background-color: rgba(255, 255, 255, 0.575);
-   }
-
-   .cardContainer {
-      height: 100%;
-      width: 86%;
-      display: inline-block;
-      vertical-align: bottom;
-      margin-left: 2px;
-   }
-
-   .row {
-      display: flex;
-      height: 23%;
-      width: 99%;
-      margin: 4px;
-   }
-
-   .card {
-      width: 20%;
-      display: inline-block;
-      position: relative;
-      margin: 2px;
-      border-radius: 15px;
-      transition: all 0.3s ease-in-out;
-   }
-
-   .flip {
-      transform: rotateY(180deg);
-   }
-
-   .cardFront,
-   .cardBack {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 0 5px 5px rgb(100, 100, 100);
-   }
-
-   .cardBack {
-      backface-visibility: hidden;
-   }
-
-   .modalContainer {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.404);
-   }
-
-   .modalContent {
-      background-color: rgba(255, 255, 255, 0.808);
-      margin: 10% auto;
-      padding: 20px;
-      border: 2px solid rgb(41, 41, 41);
-      height: 50%;
-      width: 55%;
-      font-size: 5vmin;
-      font-family: 'Luckiest Guy', cursive;
-      text-align: center;
-      border-radius: 15px;
-   }
-
-   .closeModal {
-      color: floralwhite;
-      font-size: 2.5vmin;
-      font-family: 'Luckiest Guy', cursive;
-      border: 5px solid rgb(41, 41, 41);
-      background-color: rgba(41, 41, 41);
-      border-radius: 7px;
-      width: 50%;
-      margin: auto;
-   }
-
-   .winMessage {
-      color: rgba(41, 41, 41);
-      margin-top: 5px;
-      margin-bottom: 10px;
-   }
-
-   .win {
-      height: 50%;
-      width: 100%;
-      background-image: url(../images/boo-sully-hug.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      border-radius: 15px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-   }
-
-   .hidden {
-      display: none;
-   }
-}
-
-/* iphone 6/7/8: portrait */
-@media only screen and (min-width: 375px) and (max-width: 600px) {
-   body {
-      background-image: url(../images/scare-factory.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: auto;
-   }
-
-   .titleContainer {
-      height: 10vh;
-      width: 100%;
-      line-height: 1.25;
-      color: rgb(41, 41, 41);
-      text-shadow: -5px 4px 5px rgb(127, 82, 216);
-      font-weight: bold;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 8vmin;
-      text-align: center;
-   }
-
-   .gameContainer {
-      height: 87vh;
-      width: 100%;
-      display: inline-block;
-      padding-top: 8px;
-   }
-
-   .statsContainer {
-      height: 100%;
-      width: 19%;
-      display: inline-block;
-      vertical-align: bottom;
-      margin-left: 10px;
-   }
-
-   .stats {
-      height: 8vh;
-      width: 98%;
-      line-height: 2.5;
-      color: rgb(41, 41, 41);
-      text-shadow: -3px 2px 3px rgb(127, 82, 216);
-      font-weight: bold;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 3vmin;
-      text-align: center;
-   }
-
-   .games,
-   .attempts,
-   .accuracy {
-      border: 2px solid rgb(41, 41, 41);
-      border-radius: 15px;
-      background-color: rgba(255, 255, 255, 0.575);
-   }
-
-   .cardContainer {
-      height: 100%;
-      width: 79%;
-      display: inline-block;
-      vertical-align: bottom;
-      margin-left: 10px;
-   }
-
-   .row {
-      display: flex;
-      height: 23%;
-      width: 99%;
-      margin: 5px;
-   }
-
-   .card {
-      width: 20%;
-      display: inline-block;
-      position: relative;
-      margin: 5px;
-      border-radius: 15px;
-      transition: all 0.3s ease-in-out;
-   }
-
-   .flip {
-      transform: rotateY(180deg);
-   }
-
-   .cardFront,
-   .cardBack {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 0 5px 5px rgb(100, 100, 100);
-   }
-
-   .cardBack {
-      backface-visibility: hidden;
-   }
-
-   .modalContainer {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      overflow: auto;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0, 0, 0, 0.404);
-   }
-
-   .modalContent {
-      background-color: rgba(255, 255, 255, 0.808);
-      margin: 10% auto;
-      padding: 20px;
-      border: 2px solid rgb(41, 41, 41);
-      width: 50%;
-      font-size: 5vmin;
-      font-family: 'Luckiest Guy', cursive;
-      text-align: center;
-      border-radius: 15px;
-   }
-
-   .closeModal {
-      color: floralwhite;
-      font-size: 2.5vmin;
-      font-family: 'Luckiest Guy', cursive;
-      border: 5px solid rgb(41, 41, 41);
-      background-color: rgba(41, 41, 41);
-      border-radius: 7px;
-      width: 50%;
-      margin: auto;
-   }
-
-   .winMessage {
-      color: rgba(41, 41, 41);
-      margin-top: 5px;
-      margin-bottom: 10px;
-   }
-
-   .win {
-      height: 350px;
-      width: 98%;
-      background-image: url(../images/boo-sully-hug.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: auto;
-      border-radius: 15px;
-      margin-top: 25px;
-      margin-bottom: 15px;
    }
 
    .hidden {
