@@ -107,17 +107,18 @@
       z-index: 1;
       left: 0;
       top: 0;
+      height: 100%;
       width: 100%;
       overflow: auto;
-      background-color: rgb(0,0,0);
       background-color: rgba(0, 0, 0, 0.404);
    }
 
    .modalContent {
       background-color: rgba(255, 255, 255, 0.808);
-      margin: 10% auto;
-      padding: 20px;
+      margin: 8% auto;
+      padding: 40px;
       border: 2px solid rgb(41, 41, 41);
+      height: 55%;
       width: 50%;
       font-size: 5vmin;
       font-family: 'Luckiest Guy', cursive;
@@ -143,20 +144,20 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 5px;
-      margin-bottom: 10px;
+      margin-top: 25px;
+      margin-bottom: 25px;
    }
 
    .win {
-      height: 350px;
-      width: 98%;
+      height: 50%;
+      width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: cover;
       border-radius: 15px;
-      margin-top: 25px;
-      margin-bottom: 15px;
+      margin-top: 45px;
+      margin-bottom: 45px;
    }
 
    .hidden {
@@ -271,16 +272,16 @@
       height: 100%;
       width: 100%;
       overflow: auto;
-      background-color: rgb(0,0,0);
       background-color: rgba(0, 0, 0, 0.404);
    }
 
    .modalContent {
       background-color: rgba(255, 255, 255, 0.808);
-      margin: 10% auto;
-      padding: 20px;
+      margin: 13% auto;
+      padding: 30px;
       border: 2px solid rgb(41, 41, 41);
-      width: 50%;
+      height: 55%;
+      width: 60%;
       font-size: 5vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
@@ -300,20 +301,20 @@
 
    .winMessage {
       color: rgba(41, 41, 41);
-      margin-top: 5px;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
    }
 
    .win {
-      height: 350px;
-      width: 98%;
+      height: 50%;
+      width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: cover;
       border-radius: 15px;
-      margin-top: 25px;
-      margin-bottom: 15px;
+      margin-top: 45px;
+      margin-bottom: 35px;
    }
 
    .hidden {
@@ -611,7 +612,7 @@
       padding: 20px;
       border: 2px solid rgb(41, 41, 41);
       height: 50%;
-      width: 50%;
+      width: 55%;
       font-size: 5vmin;
       font-family: 'Luckiest Guy', cursive;
       text-align: center;
@@ -648,8 +649,8 @@
       background-position: center;
       background-size: cover;
       border-radius: 15px;
-      margin-top: 25px;
-      margin-bottom: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
    }
 
    .hidden {
