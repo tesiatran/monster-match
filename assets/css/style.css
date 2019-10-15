@@ -189,15 +189,15 @@
       height: 87vh;
       width: 100%;
       display: inline-block;
-      padding-top: 8px;
+      padding-top: 6px;
    }
 
    .statsContainer {
       height: 100%;
-      width: 19%;
+      width: 16%;
       display: inline-block;
       vertical-align: bottom;
-      margin-left: 10px;
+      margin-left: 8px;
    }
 
    .stats {
@@ -222,10 +222,9 @@
 
    .cardContainer {
       height: 100%;
-      width: 79%;
+      width: 82%;
       display: inline-block;
       vertical-align: bottom;
-      margin-left: 10px;
    }
 
    .row {
@@ -241,18 +240,7 @@
       position: relative;
       margin: 5px;
       border-radius: 15px;
-      transition: all 0.3s ease-in-out;
-   }
-
-   /* .card:hover > .cardBack {
-      box-shadow: 0 0 5px 5px rgb(10, 175, 180);
-      transform: scale(1.03);
-      transition: all .1s ease-in-out;
       cursor: pointer;
-   } */
-
-   .flip {
-      transform: rotateY(180deg);
    }
 
    .cardFront,
@@ -268,6 +256,11 @@
 
    .cardBack {
       backface-visibility: hidden;
+   }
+
+   .flip {
+      transform: rotateY(180deg);
+      transition: all 0.5s ease-in-out;
    }
 
    .modalContainer {
@@ -303,11 +296,6 @@
       width: 50%;
       margin: auto;
    }
-
-   /* .closeModal:hover {
-      box-shadow: 0 0 2px 2px rgba(10, 175, 180);
-      color: rgb(10, 175, 180);
-   } */
 
    .winMessage {
       color: rgba(41, 41, 41);
@@ -522,18 +510,17 @@
    }
 
    .gameContainer {
-      height: 87vh;
+      height: 85vh;
       width: 100%;
       display: inline-block;
-      padding-top: 8px;
    }
 
    .statsContainer {
       height: 100%;
-      width: 19%;
+      width: 12%;
       display: inline-block;
       vertical-align: bottom;
-      margin-left: 10px;
+      margin-left: 2px;
    }
 
    .stats {
@@ -558,24 +545,24 @@
 
    .cardContainer {
       height: 100%;
-      width: 79%;
+      width: 86%;
       display: inline-block;
       vertical-align: bottom;
-      margin-left: 10px;
+      margin-left: 2px;
    }
 
    .row {
       display: flex;
       height: 23%;
       width: 99%;
-      margin: 5px;
+      margin: 4px;
    }
 
    .card {
       width: 20%;
       display: inline-block;
       position: relative;
-      margin: 5px;
+      margin: 2px;
       border-radius: 15px;
       transition: all 0.3s ease-in-out;
    }
