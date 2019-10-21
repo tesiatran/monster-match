@@ -12,6 +12,14 @@ $name = $result['name'];
 $attempts = $result['attempts'];
 $accuracy = $result['accuracy'];
 
+$insertQuery = "INSERT INTO `highscore`
+  (`name`, `attempts`, `accuracy`)
+  VALUES (`$name`, `$attempts`, `$accuracy`)";
 
+$insertResult = mysqli_query($conn, $insertQuery);
+
+if(!$insertResult) {
+  throw new Exception("Failed to add data to table " . $insertResult);
+}
 
 ?>
