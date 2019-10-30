@@ -99,8 +99,10 @@
 
    .flip {
       transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
       transition: all 0.2s ease-in-out;
-   }
+      -webkit-transition: all 0.2s ease-in-out;
+    }
 
    .modalContainer {
       position: fixed;
