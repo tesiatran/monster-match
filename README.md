@@ -18,17 +18,13 @@ Monster Match is a memory matching card game with statistics that update in real
 
 ## Initial Setup
 
-1. Fork this repository and clone the fork.
-    - Click on the <kbd>**Fork**</kbd> button at the top right of the page.
-    - Select your GitHub user name to complete the fork.
-
-2. Clone this repository to your development environment.
-    - In your terminal, navigate to the location of your desired folder.
+1. Fork this repository and clone the fork using your terminal.
     - `git clone https://github.com/[Your User Name]/monsters-memory-match.git`
 
-3. Navigate to the `/monsters-memory-match` directory.
+2. Navigate to the `/monsters-memory-match` directory.
     - `cd monsters-memory-match`
-    - You are now ready to get started!
+
+3. Open the `index.html` file and enjoy!
 
 ## Contributions
 
