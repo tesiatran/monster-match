@@ -2,9 +2,9 @@
 
 ## Game Details
 
-Monster Match is a Monsters Inc. themed memory matching card game.
+Monster Match is a Monsters Inc. themed memory matching card game. Click on a card to reveal the monster. Match two of the same monsters to help Boo find her way home. If the monsters don't match, they will flip back over, and you will have to try again. There are 16 monsters total.
 
-### Project Setup
+## Initial Setup
 
 Before starting on this project, you will need to **fork** and then **clone** this repository into your `lfz` folder on your current development environment.
 
