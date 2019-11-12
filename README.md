@@ -30,6 +30,6 @@ Monster Match is a Monsters Inc. themed memory matching card game. Click on a ca
     - `cd monsters-memory-match`
     - You are now ready to get started!
 
-## Getting Started
+## Contributions
 
-After navigating into this repository, you will want to start by creating a new branch off of the `master` branch to contain the code required for the next feature of this project.
+
