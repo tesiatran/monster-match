@@ -4,7 +4,7 @@
 
 ## Game Details
 
-Monster Match is a Monsters Inc. themed memory matching card game. Click on a card to reveal the monster. Match two of the same monsters to help Boo find her way home. If the monsters don't match, they will flip back over, and you will have to try again. There are 16 monsters total.
+Monster Match is a memory matching card game. Click on a card to reveal the monster. Match two of the same monsters to help Boo find her way home. If the monsters don't match, they will flip back over, and you will have to try again. There are 16 monsters total. Good luck!
 
 ### Tech Stack
 
@@ -20,13 +20,13 @@ Monster Match is a Monsters Inc. themed memory matching card game. Click on a ca
 
 1. Fork this repository and clone the fork.
     - Click on the <kbd>**Fork**</kbd> button at the top right of the page.
-    - Select your Github user name to complete the fork.
+    - Select your GitHub user name to complete the fork.
 
 2. Clone this repository to your development environment.
     - In your terminal, navigate to the location of your desired folder.
     - `git clone https://github.com/[Your User Name]/monsters-memory-match.git`
 
-3. Navigate into the `monsters-memory-match` directory.
+3. Navigate to the `monsters-memory-match` directory.
     - `cd monsters-memory-match`
     - You are now ready to get started!
 
