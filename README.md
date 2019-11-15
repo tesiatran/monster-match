@@ -2,7 +2,7 @@
 
 [Live Site](http://monsters.tesiatran.com/)
 
-## Game Details
+## Project Details
 
 Monster Match is a memory matching card game with statistics that update in real-time. Click on a card to reveal the monster. Match two of the same monsters to help Boo find her way home. If the monsters don't match, they will flip back over, and you will have to try again. There are 16 monsters total. Good luck!
 
