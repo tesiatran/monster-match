@@ -28,5 +28,4 @@ Monster Match is a memory matching card game with statistics that update in real
 
 ## Contributions
 
-Please feel free to fork this repo and submit pull requests. You can also send any suggestions to [tesiatran88@gmail.com](mailto:tesiatran88@gmail.com).
-I am always looking to improve and would love to hear from you!
+I am always looking to improve and would love to hear from you! Please feel free to fork this repo and submit pull requests. You can also send any suggestions to [tesiatran88@gmail.com](mailto:tesiatran88@gmail.com).
