@@ -50,6 +50,7 @@ function intitializeApp() {
    $(".cardBack").on("click", handleCardClick);
    $(".closeWinModal").on("click", submitName);
    $(".playAgain").on("click", playAgain);
+   $(".resetButton").on("click", resetGame);
 }
 
 function createCards(arrayOfMonsters) {
