@@ -115,7 +115,7 @@
       background-color: rgba(0, 0, 0, 0.404);
    }
 
-   .modalContent {
+   .winModalContent {
       background-color: rgba(255, 255, 255, 0.808);
       margin: 8% auto;
       padding: 40px;
@@ -128,7 +128,7 @@
       border-radius: 15px;
    }
 
-   .closeModal {
+   .closeWinModal {
       color: floralwhite;
       font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
@@ -140,7 +140,7 @@
       cursor: pointer;
    }
 
-   .closeModal:hover {
+   .closeWinModal:hover {
       box-shadow: 0 0 2px 2px rgba(10, 175, 180);
       color: rgb(10, 175, 180);
    }
@@ -276,7 +276,7 @@
       background-color: rgba(0, 0, 0, 0.404);
    }
 
-   .modalContent {
+   .winModalContent {
       background-color: rgba(255, 255, 255, 0.808);
       margin: 13% auto;
       padding: 30px;
@@ -289,7 +289,7 @@
       border-radius: 15px;
    }
 
-   .closeModal {
+   .closeWinModal {
       color: floralwhite;
       font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
@@ -440,7 +440,7 @@
       background-color: rgba(0, 0, 0, 0.404);
    }
 
-   .modalContent {
+   .winModalContent {
       background-color: rgba(255, 255, 255, 0.808);
       margin: 26% auto;
       padding: 30px;
@@ -453,7 +453,7 @@
       border-radius: 15px;
    }
 
-   .closeModal {
+   .closeWinModal {
       color: floralwhite;
       font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
@@ -596,7 +596,7 @@
       background-color: rgba(0, 0, 0, 0.404);
    }
 
-   .modalContent {
+   .winModalContent {
       background-color: rgba(255, 255, 255, 0.808);
       margin: 10% auto;
       padding: 20px;
@@ -609,7 +609,7 @@
       border-radius: 15px;
    }
 
-   .closeModal {
+   .closeWinModal {
       color: floralwhite;
       font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;
@@ -761,7 +761,7 @@
       background-color: rgba(0, 0, 0, 0.404);
    }
 
-   .modalContent {
+   .winModalContent {
       background-color: rgba(255, 255, 255, 0.808);
       margin: 43% auto;
       padding: 20px;
@@ -774,7 +774,7 @@
       border-radius: 15px;
    }
 
-   .closeModal {
+   .closeWinModal {
       color: floralwhite;
       font-size: 4vmin;
       font-family: 'Luckiest Guy', cursive;

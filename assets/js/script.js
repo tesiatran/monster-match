@@ -48,7 +48,7 @@ function intitializeApp() {
    var shuffledMonsters = shuffleCards(monsterArray);
    createCards(shuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeModal").on("click", resetGame);
+   $(".closeWinModal").on("click", resetGame);
 }
 
 function createCards(arrayOfMonsters) {
@@ -157,7 +157,7 @@ function resetGame() {
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeModal").on("click", resetGame);
+   $(".closeWinModal").on("click", resetGame);
 }
 
 function calculateAccuracy() {
