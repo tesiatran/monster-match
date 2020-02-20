@@ -184,6 +184,7 @@ function shuffleCards(shuffledMonsterArray) {
 }
 
 function submitName() {
+   event.preventDefault();
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
 }
