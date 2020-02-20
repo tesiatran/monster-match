@@ -151,7 +151,7 @@
       margin-bottom: 25px;
    }
 
-   .win {
+   .winPicture {
       height: 50%;
       width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
@@ -161,6 +161,10 @@
       border-radius: 15px;
       margin-top: 45px;
       margin-bottom: 45px;
+   }
+
+   .winInput {
+      font-size: 2vmin;
    }
 
    .hidden {
@@ -305,7 +309,7 @@
       margin-top: 15px;
    }
 
-   .win {
+   .winPicture {
       height: 50%;
       width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
@@ -469,7 +473,7 @@
       margin-top: 25px;
    }
 
-   .win {
+   .winPicture {
       height: 50%;
       width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
@@ -625,7 +629,7 @@
       margin-top: 0px;
    }
 
-   .win {
+   .winPicture {
       height: 50%;
       width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
@@ -790,7 +794,7 @@
       margin-top: 10px;
    }
 
-   .win {
+   .winPicture {
       height: 50%;
       width: 100%;
       background-image: url(../images/boo-sully-hug.jpg);
