@@ -125,7 +125,7 @@ function handleCardClick(event) {
       displayStats();
    }
    if(matches === maxMatches) {
-      $(".modalContainer").removeClass("hidden");
+      $(".winModalContainer").removeClass("hidden");
    }
 }
 
@@ -139,7 +139,7 @@ function flipCardBack() {
 }
 
 function resetGame() {
-   $(".modalContainer").addClass("hidden");
+   $(".winModalContainer").addClass("hidden");
    $(".cardBack").removeClass("flip");
    firstCardClicked = null;
    secondCardClicked = null;
