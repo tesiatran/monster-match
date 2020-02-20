@@ -48,7 +48,7 @@ function intitializeApp() {
    var shuffledMonsters = shuffleCards(monsterArray);
    createCards(shuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeWinModal").on("click", resetGame);
+   $(".closeWinModal").on("click", playAgain);
 }
 
 function createCards(arrayOfMonsters) {
@@ -138,7 +138,7 @@ function flipCardBack() {
    secondImage = null;
 }
 
-function resetGame() {
+function playAgain() {
    $(".winModalContainer").addClass("hidden");
    $(".cardBack").removeClass("flip");
    firstCardClicked = null;
@@ -157,7 +157,7 @@ function resetGame() {
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeWinModal").on("click", resetGame);
+   $(".closeWinModal").on("click", playAgain);
 }
 
 function calculateAccuracy() {
