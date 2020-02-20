@@ -140,7 +140,7 @@ function flipCardBack() {
 }
 
 function playAgain() {
-   $(".winModalContainer").addClass("hidden");
+   $(".scoresModalContainer").addClass("hidden");
    $(".cardBack").removeClass("flip");
    firstCardClicked = null;
    secondCardClicked = null;
@@ -157,7 +157,8 @@ function playAgain() {
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeWinModal").on("click", playAgain);
+   $(".closeWinModal").on("click", submitName);
+   $(".playAgain").on("click", playAgain);
 }
 
 function calculateAccuracy() {
@@ -184,7 +185,8 @@ function shuffleCards(shuffledMonsterArray) {
 }
 
 function submitName() {
-
+   $(".winModalContainer").addClass("hidden");
+   $(".scoresModalContainer").removeClass("hidden");
 }
 
 function resetGame() {
