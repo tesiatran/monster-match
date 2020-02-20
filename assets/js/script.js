@@ -148,11 +148,10 @@ function playAgain() {
    matches = null;
    games++;
    $(".games").text(games);
-   matches = null;
-   accuracy = 0;
    attempts = 0;
-   $(".accuracy").text(accuracy + "%");
+   accuracy = 0;
    $(".attempts").text(attempts);
+   $(".accuracy").text(accuracy + "%");
    $(".cardContainer").empty();
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
@@ -182,3 +181,25 @@ function shuffleCards(shuffledMonsterArray) {
    }
    return shuffledMonsterArray;
 }
+
+// function resetGame() {
+//    $(".winModalContainer").addClass("hidden");
+//    $(".cardBack").removeClass("flip");
+//    firstCardClicked = null;
+//    secondCardClicked = null;
+//    firstImage = null;
+//    secondImage = null;
+//    matches = null;
+//    games++;
+//    $(".games").text(games);
+//    matches = null;
+//    accuracy = 0;
+//    attempts = 0;
+//    $(".accuracy").text(accuracy + "%");
+//    $(".attempts").text(attempts);
+//    $(".cardContainer").empty();
+//    var reshuffledMonsters = shuffleCards(monsterArray);
+//    createCards(reshuffledMonsters);
+//    $(".cardBack").on("click", handleCardClick);
+//    $(".closeWinModal").on("click", playAgain);
+// }
