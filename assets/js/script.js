@@ -48,7 +48,7 @@ function intitializeApp() {
    var shuffledMonsters = shuffleCards(monsterArray);
    createCards(shuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
-   $(".closeWinModal").on("click", submitName);
+   $(".closeWinModal").on("click", submitScore);
    $(".playAgain").on("click", playAgain);
    $(".resetButton").on("click", resetGame);
 }
@@ -183,8 +183,17 @@ function shuffleCards(shuffledMonsterArray) {
    return shuffledMonsterArray;
 }
 
-function submitName() {
+function submitScore() {
    event.preventDefault();
+
+   var score = $(".attempts").text();
+   var name = $(".name").val();
+   var user = {
+      "name": name,
+      "score": score
+   };
+   var highScores = [];
+   
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
 }
