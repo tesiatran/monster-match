@@ -13,10 +13,10 @@ $retrieveQueryResult = mysqli_query($conn, $retrieveQuery);
     throw new Exception("ERROR: " . mysqli_error($conn));
   }
 
-$rowCount = mysqli_num_rows($scoreResult);
+$rowCount = mysqli_num_rows($retrieveQueryResult);
 
 if($rowCount === 0) {
-  throw new Exception("No rows exist.");
+  throw new Exception("No data exists.");
 }
 
 $output = [];
