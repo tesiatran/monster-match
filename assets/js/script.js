@@ -228,7 +228,7 @@ function retrieveScores() {
 }
 
 function displayScores(response) {
-
+   
 }
 
 function resetGame() {
