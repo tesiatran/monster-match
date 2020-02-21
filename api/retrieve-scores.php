@@ -7,10 +7,10 @@ require_once("db_connection.php");
 
 $retrieveQuery = "SELECT * FROM `high_scores` ORDER BY attempts ASC, date ASC";
 
-  $scoreResult = mysqli_query($conn, $scoreQuery);
+$retrieveQueryResult = mysqli_query($conn, $retrieveQuery);
 
-  if(!$scoreResult) {
-    throw new Exception("Connection Failed: " . mysqli_error($conn));
+  if(!$retrieveQueryResult) {
+    throw new Exception("ERROR: " . mysqli_error($conn));
   }
 
 $rowCount = mysqli_num_rows($scoreResult);
