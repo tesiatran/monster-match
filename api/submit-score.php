@@ -7,13 +7,13 @@ startup();
 
 $bodyData = getBodyData();
 
-if ($bodyData["attempts"]) {
-  $attempts = $bodyData["attempts"];
-  if (gettype($attempts) !== "integer") {
-    throw new Exception("Attempts must be a number");
+if ($bodyData["score"]) {
+  $score = $bodyData["score"];
+  if (gettype($score) !== "integer") {
+    throw new Exception("Score must be a number");
   }
-  if (intval($attempts) < 1) {
-    throw new Exception("Attempts must be greater than 0");
+  if (intval($score) < 1) {
+    throw new Exception("Score must be greater than 0");
   }
 } else {
   throw new Exception("A value is required");
@@ -32,7 +32,7 @@ $date = gmdate("Y-m-d H:i:s");
 
 $submitQuery = "INSERT INTO `high_scores`
                 SET `name` = '$name',
-                    `attempts` = '$attempts',
+                    `score` = '$score',
                     `date` = '$date'";
 
 $submitQueryResult = mysqli_query($conn, $submitQuery);
