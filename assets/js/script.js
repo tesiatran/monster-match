@@ -193,6 +193,8 @@ function submitScore() {
       "score": score
    };
    var highScores = [];
+   highScores.push($.post("/api/add-score.php", JSON.stringify(user)));
+   Promise.allSettled(highScores).then(getScores);
 
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
