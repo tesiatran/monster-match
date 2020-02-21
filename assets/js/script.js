@@ -184,6 +184,10 @@ function shuffleCards(shuffledMonsterArray) {
 }
 
 function submitScore() {
+   $(".winModalContainer").addClass("hidden");
+   $(".scoresModalContainer").removeClass("hidden");
+   event.preventDefault();
+
    var score = $(".attempts").text();
    var name = $(".name").val();
    var highScore = {
@@ -197,23 +201,30 @@ function submitScore() {
       dataType: "jsonp",
       data: highScoreJson,
       url: "api/submit-score.php",
+      success: function() {
+         retrieveScores();
+      },
+      error: function() {
+         console.log(false);
+      }
    };
    $.ajax(submitScoreConfig)
-      .done(() => retrieveScores());
-
-   $(".winModalContainer").addClass("hidden");
-   $(".scoresModalContainer").removeClass("hidden");
-   event.preventDefault();
 }
 
 function retrieveScores() {
    var retrieveScoresConfig = {
+      type: "GET",
       dataType: "json",
+      data: scoreData,
       url: "api/retrieve-scores.php",
+      success: function(response) {
+         displayScores(response);
+      },
+      error: function() {
+         console.log(false);
+      }
    }
    $.ajax(retrieveScoresConfig);
-
-   
 }
 
 function resetGame() {
