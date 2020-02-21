@@ -198,14 +198,15 @@ function submitScore() {
       data: highScoreJson,
       url: "api/submit-score.php",
    };
-   $.ajax(submitScoreConfig);
+   $.ajax(submitScoreConfig)
+      .done(() => retrieveScores());
 
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
    event.preventDefault();
 }
 
-function getScores() {
+function retrieveScores() {
 
 }
 
