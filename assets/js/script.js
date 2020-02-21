@@ -207,7 +207,13 @@ function submitScore() {
 }
 
 function retrieveScores() {
+   var retrieveScoresConfig = {
+      dataType: "json",
+      url: "api/retrieve-scores.php",
+   }
+   $.ajax(retrieveScoresConfig);
 
+   
 }
 
 function resetGame() {
