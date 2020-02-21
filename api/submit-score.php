@@ -28,12 +28,11 @@ if ($bodyData["name"]) {
   throw new Exception("An input is required");
 }
 
-$date = gmdate("Y-m-d H:i:s");
+// $date = gmdate("Y-m-d H:i:s");
 
 $submitQuery = "INSERT INTO `high_scores`
                 SET `name` = '$name',
-                    `score` = '$score',
-                    `date` = '$date'";
+                    `score` = '$score'";
 
 $submitQueryResult = mysqli_query($conn, $submitQuery);
 

@@ -106,11 +106,7 @@ function handleCardClick(event) {
       firstImage = firstCardClicked.siblings().css("background-image");
       secondImage = secondCardClicked.siblings().css("background-image");
 
-      console.log("first image: ", firstImage);
-      console.log("second image: ", secondImage);
-
       if(firstImage === secondImage) {
-         console.log("cards match");
          firstCardClicked = null;
          secondCardClicked = null;
          firstImage = null;
@@ -119,7 +115,6 @@ function handleCardClick(event) {
          attempts++;
          calculateAccuracy();
       } else {
-         console.log("flip card back");
          setTimeout(flipCardBack, 800);
          attempts++;
          calculateAccuracy();
@@ -183,16 +178,11 @@ function shuffleCards(shuffledMonsterArray) {
    return shuffledMonsterArray;
 }
 
-function submitScore() {
-   $(".winModalContainer").addClass("hidden");
-   $(".scoresModalContainer").removeClass("hidden");
-   event.preventDefault();
-
-   var score = $(".attempts").text();
-   var name = $(".name").val();
+function submitScore(score) {
+   var name = $(".nameInput").val();
    var highScore = {
       name: name,
-      score: score
+      score: attempts
    };
    var highScoreJson = JSON.stringify(highScore);
 
@@ -202,13 +192,17 @@ function submitScore() {
       data: highScoreJson,
       url: "api/submit-score.php",
       success: function() {
-         retrieveScores();
+         console.log(true);
       },
       error: function() {
          console.log(false);
       }
    };
    $.ajax(submitScoreConfig)
+      .done(() => retrieveScores());
+
+   $(".winModalContainer").addClass("hidden");
+   $(".scoresModalContainer").removeClass("hidden");
 }
 
 function retrieveScores() {
