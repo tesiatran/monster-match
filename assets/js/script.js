@@ -228,7 +228,18 @@ function retrieveScores() {
 }
 
 function displayScores(response) {
-   
+   var rankNumber = 1;
+   var highScoreEntry = null;
+
+   for (var entryIndex = 0; entryIndex < response.length; entryIndex++) {
+      var rank = $("<td>").text(rankNumber);
+      var name = $("<td>").text(response[entryIndex].name);
+      var score = $("<td>").text(response[entryIndex].score);
+
+      highScoreEntry = $("<tr>").append(rank, name, score);
+      rankNumber++;
+      $(".scoresTable").append(highScoreEntry);
+   }
 }
 
 function resetGame() {
