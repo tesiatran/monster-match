@@ -15,6 +15,10 @@ if ($bodyData["attempts"]) {
   if (intval($attempts) < 1) {
     throw new Exception("Attempts must be greater than 0");
   }
+} else {
+  throw new Exception("A value is required");
 }
+
+
 
 ?>
