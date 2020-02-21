@@ -37,6 +37,8 @@ $submitQuery = "INSERT INTO `high_scores`
 
 $submitQueryResult = mysqli_query($conn, $submitQuery);
 
-
+if (!$submitQueryResult) {
+  throw new Exception("ERROR: " . mysqli_error($conn));
+}
 
 ?>
