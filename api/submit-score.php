@@ -19,6 +19,11 @@ if ($bodyData["attempts"]) {
   throw new Exception("A value is required");
 }
 
-
+if ($bodyData["name"]) {
+  $name = $bodyData["name"];
+  if (gettype($name) !== "string") {
+    throw new Exception("Name cannot contain a number");
+  }
+}
 
 ?>
