@@ -227,6 +227,10 @@ function retrieveScores() {
    $.ajax(retrieveScoresConfig);
 }
 
+function displayScores(response) {
+
+}
+
 function resetGame() {
    $(".cardBack").removeClass("flip");
    firstCardClicked = null;
