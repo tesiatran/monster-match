@@ -12,6 +12,9 @@ if ($bodyData["attempts"]) {
   if (gettype($attempts) !== "integer") {
     throw new Exception("Attempts must be a number");
   }
+  if (intval($attempts) < 1) {
+    throw new Exception("Attempts must be greater than 0");
+  }
 }
 
 ?>
