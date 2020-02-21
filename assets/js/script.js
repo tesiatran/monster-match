@@ -185,7 +185,7 @@ function submitScore(score) {
       score: attempts
    };
    var highScoreJson = JSON.stringify(highScore);
-   // debugger;
+
    var submitScoreConfig = {
       type: "POST",
       dataType: "json",
@@ -200,10 +200,9 @@ function submitScore(score) {
    };
    $.ajax(submitScoreConfig)
 
-   retrieveScores();
-
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
+   retrieveScores();
 }
 
 function retrieveScores() {
@@ -226,13 +225,15 @@ function displayScores(response) {
    var highScoreEntry = null;
 
    for (var entryIndex = 0; entryIndex < response.length; entryIndex++) {
-      var rank = $("<td>").text(rankNumber);
-      var name = $("<td>").text(response[entryIndex].name);
-      var score = $("<td>").text(response[entryIndex].score);
+      if (rankNumber < 6) {
+         var rank = $("<td>").text(rankNumber);
+         var name = $("<td>").text(response[entryIndex].name);
+         var score = $("<td>").text(response[entryIndex].score);
 
-      highScoreEntry = $("<tr>").append(rank, name, score);
-      rankNumber++;
-      $(".scoresTable").append(highScoreEntry);
+         highScoreEntry = $("<tr>").append(rank, name, score);
+         rankNumber++;
+         $(".scoresTable").append(highScoreEntry);
+      }
    }
 }
 
