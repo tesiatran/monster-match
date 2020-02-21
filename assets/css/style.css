@@ -167,6 +167,63 @@
       font-size: 3vmin;
    }
 
+   .scoresModalContainer {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.404);
+   }
+
+   .scoresModalContent {
+      background-color: rgba(255, 255, 255, 0.808);
+      margin: 8% auto;
+      padding: 40px;
+      border: 2px solid rgb(41, 41, 41);
+      height: 55%;
+      width: 50%;
+      font-size: 5.5vmin;
+      font-family: 'Luckiest Guy', cursive;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .scoresTable {
+      height: 50%;
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 45px;
+      margin-bottom: 45px;
+   }
+
+   .scoresTitle {
+      color: rgba(41, 41, 41);
+   }
+
+   .scoresData {
+      font-size: 3vmin;
+   }
+
+   .closeScoresModal {
+      color: floralwhite;
+      font-size: 2vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 8px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 50%;
+      margin: auto;
+      cursor: pointer;
+   }
+
+   .closeScoresModal:hover {
+      box-shadow: 0 0 2px 2px rgba(10, 175, 180);
+      color: rgb(10, 175, 180);
+   }
+
    .hidden {
       display: none;
    }

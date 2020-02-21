@@ -49,7 +49,7 @@ function intitializeApp() {
    createCards(shuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
    $(".closeWinModal").on("click", submitScore);
-   $(".playAgain").on("click", playAgain);
+   $(".closeScoresModal").on("click", playAgain);
    $(".resetButton").on("click", resetGame);
 }
 
@@ -193,7 +193,7 @@ function submitScore() {
       "score": score
    };
    var highScores = [];
-   
+
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
 }
