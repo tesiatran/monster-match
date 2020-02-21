@@ -7,6 +7,11 @@ startup();
 
 $bodyData = getBodyData();
 
-
+if ($bodyData["attempts"]) {
+  $attempts = $bodyData["attempts"];
+  if (gettype($attempts) !== "integer") {
+    throw new Exception("Attempts must be a number");
+  }
+}
 
 ?>
