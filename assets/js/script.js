@@ -226,9 +226,9 @@ function displayScores(response) {
 
    for (var entryIndex = 0; entryIndex < response.length; entryIndex++) {
       if (rankNumber < 6) {
-         var rank = $("<td>").text(rankNumber);
-         var name = $("<td>").text(response[entryIndex].name);
-         var score = $("<td>").text(response[entryIndex].score);
+         var rank = $("<td>").text(rankNumber).addClass("scoresData");
+         var name = $("<td>").text(response[entryIndex].name).addClass("scoresData");
+         var score = $("<td>").text(response[entryIndex].score).addClass("scoresData");
 
          highScoreEntry = $("<tr>").append(rank, name, score);
          rankNumber++;
