@@ -24,6 +24,10 @@ if ($bodyData["name"]) {
   if (gettype($name) !== "string") {
     throw new Exception("Name cannot contain a number");
   }
+} else {
+  throw new Exception("An input is required");
 }
+
+
 
 ?>
