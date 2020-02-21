@@ -207,6 +207,10 @@
       font-size: 3vmin;
    }
 
+   .color {
+      color: rgb(10, 175, 180);
+   }
+
    .closeScoresModal {
       color: floralwhite;
       font-size: 2vmin;
@@ -420,6 +424,10 @@
 
    .scoresData {
       font-size: 3vmin;
+   }
+
+   .color {
+      color: rgb(10, 175, 180);
    }
 
    .closeScoresModal {
@@ -642,6 +650,10 @@
       font-size: 3vmin;
    }
 
+   .color {
+      color: rgb(10, 175, 180);
+   }
+
    .closeScoresModal {
       color: floralwhite;
       font-size: 2vmin;
@@ -852,6 +864,10 @@
 
    .scoresData {
       font-size: 3vmin;
+   }
+
+   .color {
+      color: rgb(10, 175, 180);
    }
 
    .closeScoresModal {
@@ -1073,6 +1089,10 @@
 
    .scoresData {
       font-size: 3vmin;
+   }
+
+   .color {
+      color: rgb(10, 175, 180);
    }
 
    .closeScoresModal {
