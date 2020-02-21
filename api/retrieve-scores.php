@@ -20,8 +20,7 @@ if($rowCount === 0) {
 }
 
 $output = [];
-
-while($row = mysqli_fetch_assoc($scoreResult)) {
+while($row = mysqli_fetch_assoc($retrieveQueryResult)) {
   $output[] = $row;
 }
 
