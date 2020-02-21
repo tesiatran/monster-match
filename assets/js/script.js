@@ -184,20 +184,29 @@ function shuffleCards(shuffledMonsterArray) {
 }
 
 function submitScore() {
-   event.preventDefault();
-
    var score = $(".attempts").text();
    var name = $(".name").val();
-   var user = {
-      "name": name,
-      "score": score
+   var highScore = {
+      name: name,
+      score: score
    };
-   var highScores = [];
-   highScores.push($.post("/api/add-score.php", JSON.stringify(user)));
-   Promise.allSettled(highScores).then(getScores);
+   var highScoreJson = JSON.stringify(highScore);
+
+   var submitScoreConfig = {
+      type: "POST",
+      dataType: "jsonp",
+      data: highScoreJson,
+      url: "api/submit-score.php",
+   };
+   $.ajax(submitScoreConfig);
 
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
+   event.preventDefault();
+}
+
+function getScores() {
+
 }
 
 function resetGame() {
