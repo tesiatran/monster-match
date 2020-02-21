@@ -185,7 +185,7 @@ function submitScore(score) {
       score: attempts
    };
    var highScoreJson = JSON.stringify(highScore);
-
+   // debugger;
    var submitScoreConfig = {
       type: "POST",
       dataType: "json",
@@ -199,7 +199,8 @@ function submitScore(score) {
       }
    };
    $.ajax(submitScoreConfig)
-      .done(() => retrieveScores());
+
+   retrieveScores();
 
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
@@ -209,7 +210,6 @@ function retrieveScores() {
    var retrieveScoresConfig = {
       type: "GET",
       dataType: "json",
-      data: scoreData,
       url: "api/retrieve-scores.php",
       success: function(response) {
          displayScores(response);
