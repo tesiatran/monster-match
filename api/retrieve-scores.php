@@ -1,14 +1,11 @@
 <?php
 
-require_once('functions.php');
-set_exception_handler('error_handler');
+require_once("functions.php");
+set_exception_handler("error_handler");
 startup();
-require_once('db_connection.php');
+require_once("db_connection.php");
 
-$scoreQuery = "SELECT id, name, attempts, accuracy
-  FROM `highScore`
-  ORDER BY `attempts`
-  LIMIT 5";
+$retrieveQuery = "SELECT * FROM `high_scores` ORDER BY attempts ASC, date ASC";
 
   $scoreResult = mysqli_query($conn, $scoreQuery);
 
