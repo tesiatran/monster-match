@@ -842,8 +842,8 @@
       height: 50%;
       width: 100%;
       border-radius: 15px;
-      margin-top: 45px;
-      margin-bottom: 45px;
+      margin-top: 25px;
+      margin-bottom: 25px;
    }
 
    .scoresTitle {
@@ -1035,7 +1035,7 @@
       font-size: 3vmin;
    }
 
-   .scoresModalContainer {
+      .scoresModalContainer {
       position: fixed;
       z-index: 1;
       left: 0;
