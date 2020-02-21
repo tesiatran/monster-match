@@ -198,7 +198,7 @@ function submitScore() {
 
    var submitScoreConfig = {
       type: "POST",
-      dataType: "jsonp",
+      dataType: "json",
       data: highScoreJson,
       url: "api/submit-score.php",
       success: function() {
