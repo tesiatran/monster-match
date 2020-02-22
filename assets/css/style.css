@@ -296,6 +296,15 @@
       background-color: rgba(255, 255, 255, 0.575);
    }
 
+   .booContainer {
+      height: 35vh;
+      width: 100%;
+      background-image: url(../images/boo.gif);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+   }
+
    .cardContainer {
       height: 100%;
       width: 82%;
@@ -511,6 +520,15 @@
       border-radius: 15px;
       background-color: rgba(255, 255, 255, 0.575);
       margin-right: 8px;
+   }
+
+   .booContainer {
+      height: 35vh;
+      width: 100%;
+      background-image: url(../images/boo.gif);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
    }
 
    .gamesTitle,
@@ -736,6 +754,15 @@
       background-color: rgba(255, 255, 255, 0.575);
    }
 
+   .booContainer {
+      height: 35vh;
+      width: 100%;
+      background-image: url(../images/boo.gif);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+   }
+
    .cardContainer {
       height: 100%;
       width: 86%;
@@ -949,6 +976,15 @@
       border-radius: 15px;
       background-color: rgba(255, 255, 255, 0.575);
       margin-right: 5px;
+   }
+
+   .booContainer {
+      height: 35vh;
+      width: 100%;
+      background-image: url(../images/boo.gif);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
    }
 
    .gamesTitle,
