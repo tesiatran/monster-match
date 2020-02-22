@@ -522,6 +522,7 @@
       width: 100%;
       display: inline-block;
       vertical-align: bottom;
+      margin-bottom: 20px;
    }
 
    .stats {
@@ -716,7 +717,7 @@
       background-color: rgba(10, 175, 180);
       border-radius: 7px;
       width: 100%;
-      margin-top: 5px;
+      margin-top: 10px;
       cursor: pointer;
    }
 
