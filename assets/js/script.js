@@ -3,7 +3,7 @@ $(document).ready(intitializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
-var maxMatches = 1;
+var maxMatches = 16;
 var firstImage = null;
 var secondImage = null;
 var accuracy = null;
