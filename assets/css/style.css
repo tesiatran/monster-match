@@ -249,6 +249,11 @@
       cursor: pointer;
    }
 
+   .resetButton:hover {
+      box-shadow: 0 0 2px 2px rgba(10, 175, 180);
+      color: rgb(10, 175, 180);
+   }
+
    .hidden {
       display: none;
    }
