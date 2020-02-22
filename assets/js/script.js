@@ -178,7 +178,7 @@ function shuffleCards(shuffledMonsterArray) {
    return shuffledMonsterArray;
 }
 
-function submitScore(score) {
+function submitScore(attempts) {
    var name = $(".nameInput").val();
    var highScore = {
       name: name,
@@ -191,12 +191,6 @@ function submitScore(score) {
       dataType: "json",
       data: highScoreJson,
       url: "api/submit-score.php",
-      success: function() {
-         console.log(true);
-      },
-      error: function() {
-         console.log(false);
-      }
    };
    $.ajax(submitScoreConfig)
 
