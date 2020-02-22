@@ -53,7 +53,7 @@
    }
 
    .booContainer {
-      height: 35vh;
+      height: 33vh;
       width: 100%;
       background-image: url(../images/boo.gif);
       background-repeat: no-repeat;
@@ -314,7 +314,7 @@
    }
 
    .booContainer {
-      height: 35vh;
+      height: 33vh;
       width: 100%;
       background-image: url(../images/boo.gif);
       background-repeat: no-repeat;
@@ -477,6 +477,18 @@
       cursor: pointer;
    }
 
+   .resetButton {
+      color: floralwhite;
+      font-size: 2vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 8px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 25%;
+      margin: auto;
+      cursor: pointer;
+   }
+
    .hidden {
       display: none;
    }
@@ -540,7 +552,7 @@
    }
 
    .booContainer {
-      height: 35vh;
+      height: 33vh;
       width: 100%;
       background-image: url(../images/boo.gif);
       background-repeat: no-repeat;
@@ -710,6 +722,18 @@
       cursor: pointer;
    }
 
+   .resetButton {
+      color: floralwhite;
+      font-size: 2vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 8px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 25%;
+      margin: auto;
+      cursor: pointer;
+   }
+
    .hidden {
       display: none;
    }
@@ -772,7 +796,7 @@
    }
 
    .booContainer {
-      height: 35vh;
+      height: 33vh;
       width: 100%;
       background-image: url(../images/boo.gif);
       background-repeat: no-repeat;
@@ -935,6 +959,18 @@
       cursor: pointer;
    }
 
+   .resetButton {
+      color: floralwhite;
+      font-size: 2vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 8px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 25%;
+      margin: auto;
+      cursor: pointer;
+   }
+
    .hidden {
       display: none;
    }
@@ -996,7 +1032,7 @@
    }
 
    .booContainer {
-      height: 35vh;
+      height: 33vh;
       width: 100%;
       background-image: url(../images/boo.gif);
       background-repeat: no-repeat;
@@ -1165,6 +1201,18 @@
       background-color: rgba(41, 41, 41);
       border-radius: 7px;
       width: 50%;
+      margin: auto;
+      cursor: pointer;
+   }
+
+   .resetButton {
+      color: floralwhite;
+      font-size: 2vmin;
+      font-family: 'Luckiest Guy', cursive;
+      border: 8px solid rgb(41, 41, 41);
+      background-color: rgba(41, 41, 41);
+      border-radius: 7px;
+      width: 25%;
       margin: auto;
       cursor: pointer;
    }
