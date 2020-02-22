@@ -206,6 +206,8 @@ function submitScore(score) {
 }
 
 function retrieveScores() {
+   $("input").val("");
+   
    var retrieveScoresConfig = {
       type: "GET",
       dataType: "json",
