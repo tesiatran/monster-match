@@ -796,7 +796,7 @@
    }
 
    .booContainer {
-      height: 33vh;
+      height: 26vh;
       width: 100%;
       background-image: url(../images/boo.gif);
       background-repeat: no-repeat;
@@ -966,7 +966,7 @@
       border: 8px solid rgb(41, 41, 41);
       background-color: rgba(41, 41, 41);
       border-radius: 7px;
-      width: 25%;
+      width: 60%;
       margin: auto;
       cursor: pointer;
    }
