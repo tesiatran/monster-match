@@ -717,11 +717,11 @@
       color: floralwhite;
       font-size: 2vmin;
       font-family: 'Luckiest Guy', cursive;
-      border: 8px solid rgb(41, 41, 41);
-      background-color: rgba(41, 41, 41);
+      border: 2px solid rgb(10, 175, 180);
+      background-color: rgba(10, 175, 180);
       border-radius: 7px;
-      width: 25%;
-      margin: auto;
+      width: 100%;
+      margin-top: 5px;
       cursor: pointer;
    }
 
