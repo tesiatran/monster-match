@@ -1031,15 +1031,6 @@
       margin-right: 5px;
    }
 
-   .booContainer {
-      height: 33vh;
-      width: 100%;
-      background-image: url(../images/boo.gif);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-   }
-
    .gamesTitle,
    .attemptsTitle,
    .accuracyTitle {
