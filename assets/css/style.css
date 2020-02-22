@@ -212,7 +212,8 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData, .scoresHeader {
+   .scoresHeaders,
+   .scoresData {
       font-size: 3vmin;
    }
 
@@ -452,7 +453,8 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData, .scoresHeader {
+   .scoresHeaders,
+   .scoresData {
       font-size: 3vmin;
    }
 
@@ -689,7 +691,8 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData, .scoresHeader {
+   .scoresHeaders,
+   .scoresData {
       font-size: 3vmin;
    }
 
@@ -1129,7 +1132,7 @@
       font-size: 3vmin;
    }
 
-      .scoresModalContainer {
+   .scoresModalContainer {
       position: fixed;
       z-index: 1;
       left: 0;
@@ -1165,7 +1168,8 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData, .scoresHeader {
+   .scoresHeaders,
+   .scoresData {
       font-size: 3vmin;
    }
 
