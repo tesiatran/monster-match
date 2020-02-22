@@ -178,7 +178,7 @@ function shuffleCards(shuffledMonsterArray) {
    return shuffledMonsterArray;
 }
 
-function submitScore(attempts) {
+function submitScore() {
    var name = $(".nameInput").val();
    var highScore = {
       name: name,
