@@ -212,7 +212,7 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData {
+   .scoresData, .scoresHeader {
       font-size: 3vmin;
    }
 
@@ -452,7 +452,7 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData {
+   .scoresData, .scoresHeader {
       font-size: 3vmin;
    }
 
@@ -689,7 +689,7 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData {
+   .scoresData, .scoresHeader {
       font-size: 3vmin;
    }
 
@@ -926,6 +926,7 @@
       color: rgba(41, 41, 41);
    }
 
+   .scoresHeaders,
    .scoresData {
       font-size: 3vmin;
    }
@@ -1164,7 +1165,7 @@
       color: rgba(41, 41, 41);
    }
 
-   .scoresData {
+   .scoresData, .scoresHeader {
       font-size: 3vmin;
    }
 

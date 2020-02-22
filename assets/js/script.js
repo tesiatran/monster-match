@@ -202,6 +202,7 @@ function submitScore(score) {
 
    $(".winModalContainer").addClass("hidden");
    $(".scoresModalContainer").removeClass("hidden");
+   $(".nameInput").val("");
    retrieveScores();
 }
 
@@ -221,6 +222,7 @@ function retrieveScores() {
 }
 
 function displayScores(response) {
+   $(".scoresData").remove();
    var rankNumber = 1;
    var highScoreEntry = null;
 
