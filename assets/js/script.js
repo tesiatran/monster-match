@@ -150,6 +150,7 @@ function playAgain() {
    $(".attempts").text(attempts);
    $(".accuracy").text(accuracy + "%");
    $(".cardContainer").empty();
+   $(".scoresData").remove();
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
@@ -216,7 +217,7 @@ function retrieveScores() {
 }
 
 function displayScores(response) {
-   $(".scoresData").remove();
+   // $(".scoresData").remove();
    var rankNumber = 1;
    var highScoreEntry = null;
 
