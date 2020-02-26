@@ -150,7 +150,6 @@ function playAgain() {
    $(".attempts").text(attempts);
    $(".accuracy").text(accuracy + "%");
    $(".cardContainer").empty();
-   $(".scoresData").remove();
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
    $(".cardBack").on("click", handleCardClick);
@@ -204,7 +203,7 @@ function submitScore(user) {
 function retrieveScores() {
    var retrieveScoresConfig = {
       type: "GET",
-      dataType: "json",
+      dataType: "jsonp",
       url: "api/retrieve-scores.php",
       success: function(response) {
          displayScores(response);
@@ -217,7 +216,7 @@ function retrieveScores() {
 }
 
 function displayScores(response) {
-   // $(".scoresData").remove();
+   $(".scoresData").remove();
    var rankNumber = 1;
    var highScoreEntry = null;
 
