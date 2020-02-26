@@ -1,6 +1,6 @@
 # Monster Match
 
-[Live Site](http://monsters.tesiatran.com/)
+[Live Site](http://monstermatch.tesiatran.com/)
 
 ## Project Details
 
