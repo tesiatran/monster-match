@@ -1,6 +1,6 @@
 # Monster Match
 
-A game to test your memory! Click on a card to reveal the monster. Match two of the same monsters to help Boo find her way home. If the monsters don't match, they will flip back over, and you will have to try again. There are 16 monsters total. Good luck!
+A game to test your memory! Click on a card to reveal the monster. Match two of the same monsters to help Boo find her way home. If the monsters don't match, they will flip back over, and you will have to try again. There are 16 monsters total, with real-time user statistics and a leaderboard. Good luck!
 
 ### [Live Demo](http://monstermatch.tesiatran.com/)
 
