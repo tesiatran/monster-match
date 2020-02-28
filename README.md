@@ -17,26 +17,31 @@ A game to test your memory! Click on a card to reveal the monster. Match two of 
 
 ## Getting Started:
 
-1. Fork this repository and clone the fork using your terminal.
+1. Clone the repository.
 
     ```shell
-    git clone https://github.com/[your username]/monster-match.git
+    git clone https://github.com/tesiatran/monster-match.git
+    ```
+
+2. Navigate to the project directory.
+
+    ```shell
     cd monster-match
     ```
 
-2. Install all dependencies with npm.
+3. Install all dependencies with npm.
 
     ```shell
     npm install
     ```
 
-3. Import the example database to phpMyAdmin.
+4. Import the example database to MySQL.
 
     ```shell
-    mysql -u [username] -p [database name] < api/memory_match.sql
+    api/monster_match.sql
     ```
 
-4. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
+5. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
 
     ```shell
     npm run dev
