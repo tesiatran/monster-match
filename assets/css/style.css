@@ -728,241 +728,244 @@
 }
 
 /* iphone 6/7/8: landscape */
-@media only screen and (min-width: 601px) and (max-width: 736px) {
-   body {
-      background-image: url(../images/scare-factory.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-   }
+@media only screen
+   and (max-height: 375px)
+   and (max-width: 667px)
+   and (orientation: landscape) {
+      body {
+         background-image: url(../images/scare-factory.jpg);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+      }
 
-   .titleContainer {
-      height: 10vh;
-      width: 100%;
-      line-height: 1.25;
-      color: rgb(41, 41, 41);
-      text-shadow: -5px 4px 5px rgb(127, 82, 216);
-      font-weight: bold;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 8vmin;
-      text-align: center;
-   }
+      .titleContainer {
+         height: 10vh;
+         width: 100%;
+         line-height: 1.25;
+         color: rgb(41, 41, 41);
+         text-shadow: -5px 4px 5px rgb(127, 82, 216);
+         font-weight: bold;
+         font-family: 'Luckiest Guy', cursive;
+         font-size: 8vmin;
+         text-align: center;
+      }
 
-   .gameContainer {
-      height: 85vh;
-      width: 100%;
-      display: inline-block;
-      padding-top: 3px;
-   }
+      .gameContainer {
+         height: 85vh;
+         width: 100%;
+         display: inline-block;
+         padding-top: 3px;
+      }
 
-   .statsContainer {
-      height: 100%;
-      width: 12%;
-      display: inline-block;
-      vertical-align: bottom;
-      margin-left: 2px;
-   }
+      .statsContainer {
+         height: 100%;
+         width: 12%;
+         display: inline-block;
+         vertical-align: bottom;
+         margin-left: 2px;
+      }
 
-   .stats {
-      height: 8vh;
-      width: 98%;
-      line-height: 2.5;
-      color: rgb(41, 41, 41);
-      text-shadow: -3px 2px 3px rgb(127, 82, 216);
-      font-weight: bold;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 3vmin;
-      text-align: center;
-   }
+      .stats {
+         height: 8vh;
+         width: 98%;
+         line-height: 2.5;
+         color: rgb(41, 41, 41);
+         text-shadow: -3px 2px 3px rgb(127, 82, 216);
+         font-weight: bold;
+         font-family: 'Luckiest Guy', cursive;
+         font-size: 3vmin;
+         text-align: center;
+      }
 
-   .games,
-   .attempts,
-   .accuracy {
-      border: 2px solid rgb(41, 41, 41);
-      border-radius: 15px;
-      background-color: rgba(255, 255, 255, 0.575);
-   }
+      .games,
+      .attempts,
+      .accuracy {
+         border: 2px solid rgb(41, 41, 41);
+         border-radius: 15px;
+         background-color: rgba(255, 255, 255, 0.575);
+      }
 
-   .booContainer {
-      height: 26vh;
-      width: 100%;
-      background-image: url(../images/boo.gif);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-   }
+      .booContainer {
+         height: 26vh;
+         width: 100%;
+         background-image: url(../images/boo.gif);
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+      }
 
-   .cardContainer {
-      height: 100%;
-      width: 86%;
-      display: inline-block;
-      vertical-align: bottom;
-      margin-left: 2px;
-   }
+      .cardContainer {
+         height: 100%;
+         width: 86%;
+         display: inline-block;
+         vertical-align: bottom;
+         margin-left: 2px;
+      }
 
-   .row {
-      display: flex;
-      height: 23%;
-      width: 99%;
-      margin: 4px;
-   }
+      .row {
+         display: flex;
+         height: 23%;
+         width: 99%;
+         margin: 4px;
+      }
 
-   .card {
-      width: 20%;
-      display: inline-block;
-      position: relative;
-      margin: 2px;
-      border-radius: 15px;
-   }
+      .card {
+         width: 20%;
+         display: inline-block;
+         position: relative;
+         margin: 2px;
+         border-radius: 15px;
+      }
 
-   .cardFront,
-   .cardBack {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 0 5px 5px rgb(100, 100, 100);
-   }
+      .cardFront,
+      .cardBack {
+         height: 100%;
+         width: 100%;
+         position: absolute;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         box-shadow: 0 5px 5px rgb(100, 100, 100);
+      }
 
-   .cardBack {
-      backface-visibility: hidden;
-   }
+      .cardBack {
+         backface-visibility: hidden;
+      }
 
-   .flip {
-      transform: rotateY(180deg);
-      transition: all 0.2s ease-in-out;
-   }
+      .flip {
+         transform: rotateY(180deg);
+         transition: all 0.2s ease-in-out;
+      }
 
-   .winModalContainer {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.404);
-   }
+      .winModalContainer {
+         position: fixed;
+         z-index: 1;
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         overflow: auto;
+         background-color: rgba(0, 0, 0, 0.404);
+      }
 
-   .winModalContent {
-      background-color: rgba(255, 255, 255, 0.900);
-      margin: 10% auto;
-      padding: 20px;
-      border: 2px solid rgb(41, 41, 41);
-      height: 50%;
-      width: 55%;
-      font-size: 6vmin;
-      font-family: 'Luckiest Guy', cursive;
-      text-align: center;
-      border-radius: 15px;
-   }
+      .winModalContent {
+         background-color: rgba(255, 255, 255, 0.900);
+         margin: 10% auto;
+         padding: 20px;
+         border: 2px solid rgb(41, 41, 41);
+         height: 50%;
+         width: 55%;
+         font-size: 6vmin;
+         font-family: 'Luckiest Guy', cursive;
+         text-align: center;
+         border-radius: 15px;
+      }
 
-   .closeWinModal {
-      color: floralwhite;
-      font-size: 2vmin;
-      font-family: 'Luckiest Guy', cursive;
-      border: 6px solid rgb(41, 41, 41);
-      background-color: rgba(41, 41, 41);
-      border-radius: 7px;
-      width: 50%;
-      margin: auto;
-   }
+      .closeWinModal {
+         color: floralwhite;
+         font-size: 2vmin;
+         font-family: 'Luckiest Guy', cursive;
+         border: 6px solid rgb(41, 41, 41);
+         background-color: rgba(41, 41, 41);
+         border-radius: 7px;
+         width: 50%;
+         margin: auto;
+      }
 
-   .winMessage {
-      color: rgba(41, 41, 41);
-      margin-top: 0px;
-   }
+      .winMessage {
+         color: rgba(41, 41, 41);
+         margin-top: 0px;
+      }
 
-   .winPicture {
-      height: 50%;
-      width: 100%;
-      background-image: url(../images/boo-sully-hug.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      border-radius: 15px;
-      margin-top: -5px;
-      margin-bottom: 17px;
-   }
+      .winPicture {
+         height: 50%;
+         width: 100%;
+         background-image: url(../images/boo-sully-hug.jpg);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         border-radius: 15px;
+         margin-top: -5px;
+         margin-bottom: 17px;
+      }
 
-   .winInput {
-      font-size: 3vmin;
-   }
+      .winInput {
+         font-size: 3vmin;
+      }
 
-   .scoresModalContainer {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.404);
-   }
+      .scoresModalContainer {
+         position: fixed;
+         z-index: 1;
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         overflow: auto;
+         background-color: rgba(0, 0, 0, 0.404);
+      }
 
-   .scoresModalContent {
-      background-color: rgba(255, 255, 255, 0.900);
-      margin: 8% auto;
-      padding: 40px;
-      border: 2px solid rgb(41, 41, 41);
-      height: 55%;
-      width: 50%;
-      font-size: 5.5vmin;
-      font-family: 'Luckiest Guy', cursive;
-      text-align: center;
-      border-radius: 15px;
-   }
+      .scoresModalContent {
+         background-color: rgba(255, 255, 255, 0.900);
+         margin: 8% auto;
+         padding: 40px;
+         border: 2px solid rgb(41, 41, 41);
+         height: 55%;
+         width: 50%;
+         font-size: 5.5vmin;
+         font-family: 'Luckiest Guy', cursive;
+         text-align: center;
+         border-radius: 15px;
+      }
 
-   .scoresTable {
-      height: 50%;
-      width: 100%;
-      border-radius: 15px;
-      margin-top: 25px;
-      margin-bottom: 25px;
-   }
+      .scoresTable {
+         height: 50%;
+         width: 100%;
+         border-radius: 15px;
+         margin-top: 25px;
+         margin-bottom: 25px;
+      }
 
-   .scoresTitle {
-      color: rgba(41, 41, 41);
-   }
+      .scoresTitle {
+         color: rgba(41, 41, 41);
+      }
 
-   .scoresHeaders,
-   .scoresData {
-      font-size: 3vmin;
-   }
+      .scoresHeaders,
+      .scoresData {
+         font-size: 3vmin;
+      }
 
-   .color {
-      color: rgb(10, 175, 180);
-   }
+      .color {
+         color: rgb(10, 175, 180);
+      }
 
-   .closeScoresModal {
-      color: floralwhite;
-      font-size: 2vmin;
-      font-family: 'Luckiest Guy', cursive;
-      border: 8px solid rgb(41, 41, 41);
-      background-color: rgba(41, 41, 41);
-      border-radius: 7px;
-      width: 50%;
-      margin: auto;
-      cursor: pointer;
-   }
+      .closeScoresModal {
+         color: floralwhite;
+         font-size: 2vmin;
+         font-family: 'Luckiest Guy', cursive;
+         border: 8px solid rgb(41, 41, 41);
+         background-color: rgba(41, 41, 41);
+         border-radius: 7px;
+         width: 50%;
+         margin: auto;
+         cursor: pointer;
+      }
 
-   .resetButton {
-      color: floralwhite;
-      font-size: 2vmin;
-      font-family: 'Luckiest Guy', cursive;
-      border: 2px solid rgb(10, 175, 180);
-      background-color: rgba(10, 175, 180);
-      border-radius: 7px;
-      width: 100%;
-      margin: auto;
-      cursor: pointer;
-   }
+      .resetButton {
+         color: floralwhite;
+         font-size: 2vmin;
+         font-family: 'Luckiest Guy', cursive;
+         border: 2px solid rgb(10, 175, 180);
+         background-color: rgba(10, 175, 180);
+         border-radius: 7px;
+         width: 100%;
+         margin: auto;
+         cursor: pointer;
+      }
 
-   .hidden {
-      display: none;
-   }
+      .hidden {
+         display: none;
+      }
 }
 
 /* iphone 6/7/8: portrait */
