@@ -257,7 +257,7 @@
 @media only screen
    and (max-height: 768px)
    and (max-width: 1024px)
-   and (orientation: portrait) {
+   and (orientation: landscape) {
       body {
          background-image: url(../images/scare-factory.jpg);
          background-repeat: no-repeat;
