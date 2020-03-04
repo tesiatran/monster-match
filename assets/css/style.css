@@ -1,5 +1,4 @@
 /* desktop */
-@media (min-width: 1280px) {
    body {
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
@@ -253,10 +252,9 @@
    .hidden {
       display: none;
    }
-}
 
 /* ipad: landscape */
-@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
    body {
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
@@ -492,7 +490,7 @@
 }
 
 /* ipad: portrait */
-@media only screen and (min-width: 768px) and (max-width: 800px) {
+@media only screen and (min-width: 737px) and (max-width: 768px) {
    body {
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
@@ -730,7 +728,7 @@
 }
 
 /* iphone 6/7/8: landscape */
-@media only screen and (min-width: 667px) and (max-width: 700px) {
+@media only screen and (min-width: 601px) and (max-width: 736px) {
    body {
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
@@ -968,7 +966,7 @@
 }
 
 /* iphone 6/7/8: portrait */
-@media only screen and (min-width: 375px) and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
    body {
       background-image: url(../images/scare-factory.jpg);
       background-repeat: no-repeat;
