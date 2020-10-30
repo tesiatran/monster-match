@@ -144,11 +144,16 @@ function playAgain() {
    secondImage = null;
    matches = null;
    games++;
-   $(".games").text(games);
-   attempts = 0;
-   accuracy = 0;
-   $(".attempts").text(attempts);
-   $(".accuracy").text(accuracy + "%");
+
+   sessionStorage.setItem("savedGames", games);
+   var gameStorage = sessionStorage.getItem("savedGames");
+   $(".games").text(gameStorage);
+   console.log(gameStorage);
+
+   // attempts = 0;
+   // accuracy = 0;
+   // $(".attempts").text(attempts);
+   // $(".accuracy").text(accuracy + "%");
    $(".cardContainer").empty();
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
@@ -161,9 +166,17 @@ function calculateAccuracy() {
 }
 
 function displayStats() {
-      calculateAccuracy();
-      $(".accuracy").text(accuracy.toFixed(0) + "%");
-      $(".attempts").text(attempts);
+   calculateAccuracy();
+
+   sessionStorage.setItem("savedAccuracy", accuracy);
+   sessionStorage.setItem("savedAttempts", attempts);
+   var accuracyStorage = sessionStorage.getItem("savedAccuracy");
+   var attemptStorage = sessionStorage.getItem("savedAttempts");
+   console.log(accuracyStorage);
+   console.log(attemptStorage);
+   accuracy = parseInt(accuracyStorage, 10);
+   $(".accuracy").text(accuracy.toFixed(0) + "%");
+   $(".attempts").text(attemptStorage);
 }
 
 function shuffleCards(shuffledMonsterArray) {
