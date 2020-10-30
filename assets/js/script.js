@@ -8,7 +8,7 @@ var firstImage = null;
 var secondImage = null;
 var accuracy = null;
 var attempts = null;
-var games = null;
+var games = sessionStorage.getItem("savedGames");
 var monsterArray = [
    "./assets/images/cda.jpg",
    "./assets/images/celia-mae.png",
@@ -51,6 +51,19 @@ function intitializeApp() {
    $(".closeWinModal").on("click", submitScore);
    $(".closeScoresModal").on("click", playAgain);
    $(".resetButton").on("click", resetGame);
+
+   var gameStorage = sessionStorage.getItem("savedGames");
+   var accuracyStorage = sessionStorage.getItem("savedAccuracy");
+   var attemptStorage = sessionStorage.getItem("savedAttempts");
+
+   if (sessionStorage.length === 0) {
+      return;
+   } else if (sessionStorage.length > 0) {
+      accuracy = parseInt(accuracyStorage, 10);
+      $(".games").text(gameStorage);
+      $(".accuracy").text(accuracy.toFixed(0) + "%");
+      $(".attempts").text(attemptStorage);
+   }
 }
 
 function createCards(arrayOfMonsters) {
@@ -123,6 +136,8 @@ function handleCardClick(event) {
    }
    if(matches === maxMatches) {
       $(".winModalContainer").removeClass("hidden");
+      games++;
+      attempts = 0;
    }
 }
 
@@ -143,17 +158,10 @@ function playAgain() {
    firstImage = null;
    secondImage = null;
    matches = null;
-   games++;
 
    sessionStorage.setItem("savedGames", games);
-   var gameStorage = sessionStorage.getItem("savedGames");
-   $(".games").text(gameStorage);
-   console.log(gameStorage);
+   $(".games").text(sessionStorage.getItem("savedGames"));
 
-   // attempts = 0;
-   // accuracy = 0;
-   // $(".attempts").text(attempts);
-   // $(".accuracy").text(accuracy + "%");
    $(".cardContainer").empty();
    var reshuffledMonsters = shuffleCards(monsterArray);
    createCards(reshuffledMonsters);
@@ -170,13 +178,8 @@ function displayStats() {
 
    sessionStorage.setItem("savedAccuracy", accuracy);
    sessionStorage.setItem("savedAttempts", attempts);
-   var accuracyStorage = sessionStorage.getItem("savedAccuracy");
-   var attemptStorage = sessionStorage.getItem("savedAttempts");
-   console.log(accuracyStorage);
-   console.log(attemptStorage);
-   accuracy = parseInt(accuracyStorage, 10);
    $(".accuracy").text(accuracy.toFixed(0) + "%");
-   $(".attempts").text(attemptStorage);
+   $(".attempts").text(attempts);
 }
 
 function shuffleCards(shuffledMonsterArray) {
